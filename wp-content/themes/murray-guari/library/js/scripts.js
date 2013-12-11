@@ -66,7 +66,18 @@ jQuery(document).ready(function($) {
 	}
 	
 	
-	// add all your scripts here
+	
+	$(function() {
+		$('#slides').slidesjs({
+			play: {
+				active: true,
+				auto: true,
+				interval: 9000,
+				swap: true
+			}
+		});
+	});
+  
 	
  
 }); /* end of as page load scripts */
