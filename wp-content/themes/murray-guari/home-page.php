@@ -17,12 +17,15 @@ Template Name: Custom Home Page
 							<?php
 								$args = array('post_type' => 'slide', 'posts_per_page' => 5);
 								$loop = new WP_Query($args);
-								while ($loop->have_posts()) : $loop->the_post();
+								while ($loop->have_posts()) : $loop->the_post(); ?>
+								<div class="slide">
+								<?php
+//								the_post_thumbnail( 'bones-thumb-600');
 								the_post_thumbnail();
 								the_title();
-								the_content();
-								endwhile;
-							?>
+								the_content(); ?>
+								</div>
+								<?php endwhile; ?>
 							</div>
 
 <!--

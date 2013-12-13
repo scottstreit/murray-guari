@@ -1,0 +1,1 @@
+/* global mejs, _wpmejsSettings */(function(e){mejs.plugins.silverlight[0].types.push("video/x-ms-wmv");mejs.plugins.silverlight[0].types.push("audio/x-ms-wma");e(function(){var t={};typeof _wpmejsSettings!="undefined"&&(t.pluginPath=_wpmejsSettings.pluginPath);e(".wp-audio-shortcode, .wp-video-shortcode").mediaelementplayer(t)})})(jQuery);
