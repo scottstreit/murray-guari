@@ -10,40 +10,38 @@ Template Name: Custom Home Page
 
 				<div id="inner-content" class="wrap clearfix">
 
-						<div id="main" class="eightcol first clearfix" role="main">
+					<div id="slides" class="twlevecol first clearfix">
 
-							<div id="slides">
-
-							<?php
-								$args = array('post_type' => 'slide', 'posts_per_page' => 5);
-								$loop = new WP_Query($args);
-								while ($loop->have_posts()) : $loop->the_post(); ?>
-								<div class="slide">
-								<?php
-//								the_post_thumbnail( 'bones-thumb-600');
-								the_post_thumbnail();
-								the_title();
-								the_content(); ?>
-								</div>
-								<?php endwhile; ?>
-							</div>
-
-<!--
-							<article id="post-not-found" class="hentry clearfix">
-									<header class="article-header">
-										<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
-								</header>
-									<section class="entry-content">
-										<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
-								</section>
-								<footer class="article-footer">
-										<p><?php _e( 'This is the error message in the page-custom.php template.', 'bonestheme' ); ?></p>
-								</footer>
-							</article>
--->
-
-
+					<?php
+						$args = array('post_type' => 'slide', 'posts_per_page' => 5);
+						$loop = new WP_Query($args);
+						while ($loop->have_posts()) : $loop->the_post();
+					?>
+						<div class="slide">
+					<?php
+						the_post_thumbnail('bones-slide');
+						the_content();
+					?>
 						</div>
+					<?php endwhile; ?>
+					</div>
+
+
+
+					<div class="home-content">
+						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+						<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article">
+
+							<section class="entry-content clearfix">
+								<?php the_content(); ?>
+							</section>
+
+						</article>
+
+							<?php endwhile; ?>
+						<?php endif; ?>
+					</div>
 
 						<?php // get_sidebar(); ?>
 

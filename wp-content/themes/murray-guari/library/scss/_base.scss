@@ -238,6 +238,24 @@ and more scalable.
 } /* end .nav */
 
 
+
+/*********************
+		HOME PAGE STYLES
+*********************/
+.callout {
+	border: 1px solid #ccc;
+	padding: 10px;
+	height: 155px;
+	
+	a {
+		border-bottom: 1px solid #f68209;
+	}
+}
+.slidesjs-navigation {
+	display: none;
+}
+
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/

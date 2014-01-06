@@ -45,14 +45,19 @@ require_once( 'library/custom-post-type.php' ); // you can disable this if you l
 	- adding support for other languages
 */
 // require_once( 'library/translation/translation.php' ); // this comes turned off by default
+/*
+5. bootstrap navwalker
+*/
+require_once('wp_bootstrap_navwalker.php');
 
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
-/*
+
 add_image_size( 'bones-thumb-600', 600, 150, true );
 add_image_size( 'bones-thumb-300', 300, 100, true );
-*/
+add_image_size( 'bones-slide',     940, 325, true );
+
 /*
 to add more sizes, simply copy a line from above
 and change the dimensions & name. As long as you

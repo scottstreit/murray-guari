@@ -841,6 +841,19 @@ and more scalable.
 
 /* end .nav */
 /*********************
+		HOME PAGE STYLES
+*********************/
+.callout {
+  border: 1px solid #ccc;
+  padding: 10px;
+  height: 155px; }
+  .callout a {
+    border-bottom: 1px solid #f68209; }
+
+.slidesjs-navigation {
+  display: none; }
+
+/*********************
 POSTS & CONTENT STYLES
 *********************/
 #content {
@@ -1296,7 +1309,7 @@ you can add resource intensive styles.
   LAYOUT & GRID STYLES
   *********************/
   .wrap {
-    max-width: 1140px; }
+    max-width: 960px; }
 
   /*********************
   HEADER STYLES
