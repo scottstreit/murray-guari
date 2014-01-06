@@ -16,12 +16,17 @@ GENERAL STYLES
 *********************/
 
 body {
-	font-family: $serif;
+	font-family: $sans-serif;
 	font-size: 100%;
 	line-height: 1.5;
-	color: #565656;
+	background: #c4b7a1 url(../images/body-background.png) repeat-x center top;
+	color: #fff;
 }
 
+#inner-content {
+	padding: 10px;
+	background: #fff;
+}
 /********************
 WORDPRESS BODY CLASSES
 style a page via class
@@ -152,7 +157,56 @@ HEADER STYLES
 
 .header {}
 
+#inner-header {
+	padding-top: 10px;
+	font-size: 12px;
+	
+	.logo img {
+		float: left;
+		margin: -15px 25px 20px 0;
+	}
+	.tag-container {
+		float: left;
+		margin: 50px;
+		.tag-line {
+			font-style: italic;
+		}
+	}
+
+	
+	.search-form {
+		width: 100%;
+		text-align: right;
+	}
+	span  {
+		margin-right: 20px;
+		
+		a {
+			color: #fff;
+			text-decoration: none;
+		}
+	}
+	#searchform {
+		display: inline-block;
+		
+		.search-box {
+			width: 150px;
+			height: 16px;
+			border: none;
+			background-color: #dcd5cf;
+		}
+		.search-button {
+			background: url(../images/search-button.png) no-repeat center top;
+			width: 20px;
+			height: 20px;
+			text-indent: -9999px;
+			outline: none;
+			border: none;
+		}
+	}
+}
 	#logo {}
+
 
 /*********************
 NAVIGATION STYLES

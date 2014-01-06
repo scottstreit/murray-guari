@@ -151,7 +151,7 @@ probably best not to use it. I mean, were you going to anyway? */
 BUTTONS
 *********************/
 .button, .button:visited {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
   border: 1px solid #be0d37;
   border-top-color: #db0f3f;
   border-left-color: #db0f3f;
@@ -501,8 +501,8 @@ This is the desktop size. It's larger than an iPad so it will only
 be seen on the Desktop. 
 
 ******************************************************************/
-body {
-  background: #c4b7a1; }
+.navbar-toggle {
+  display: none; }
 
 /* 
 you can call the larger styles if you want, but there's really no need 

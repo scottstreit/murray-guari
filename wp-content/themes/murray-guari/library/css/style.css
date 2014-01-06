@@ -602,7 +602,7 @@ probably best not to use it. I mean, were you going to anyway? */
 BUTTONS
 *********************/
 .button, .button:visited {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
   border: 1px solid #be0d37;
   border-top-color: #db0f3f;
   border-left-color: #db0f3f;
@@ -690,10 +690,15 @@ and will be used across all viewports.
 GENERAL STYLES
 *********************/
 body {
-  font-family: "Georgia", Cambria, Times New Roman, Times, serif;
+  font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
   font-size: 100%;
   line-height: 1.5;
-  color: #565656; }
+  background: #c4b7a1 url(../images/body-background.png) repeat-x center top;
+  color: #fff; }
+
+#inner-content {
+  padding: 10px;
+  background: #fff; }
 
 /********************
 WORDPRESS BODY CLASSES
@@ -763,7 +768,7 @@ a, a:visited {
 H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
   text-rendering: optimizelegibility;
   font-weight: 500;
   /*
@@ -799,6 +804,40 @@ h5, .h5 {
 /*********************
 HEADER STYLES
 *********************/
+#inner-header {
+  padding-top: 10px;
+  font-size: 12px; }
+  #inner-header .logo img {
+    float: left;
+    margin: -15px 25px 20px 0; }
+  #inner-header .tag-container {
+    float: left;
+    margin: 50px; }
+    #inner-header .tag-container .tag-line {
+      font-style: italic; }
+  #inner-header .search-form {
+    width: 100%;
+    text-align: right; }
+  #inner-header span {
+    margin-right: 20px; }
+    #inner-header span a {
+      color: #fff;
+      text-decoration: none; }
+  #inner-header #searchform {
+    display: inline-block; }
+    #inner-header #searchform .search-box {
+      width: 150px;
+      height: 16px;
+      border: none;
+      background-color: #dcd5cf; }
+    #inner-header #searchform .search-button {
+      background: url(../images/search-button.png) no-repeat center top;
+      width: 20px;
+      height: 20px;
+      text-indent: -9999px;
+      outline: none;
+      border: none; }
+
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -1433,8 +1472,8 @@ you can add resource intensive styles.
   be seen on the Desktop. 
   
   ******************************************************************/
-  body {
-    background: #c4b7a1; } }
+  .navbar-toggle {
+    display: none; } }
 /*
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.
