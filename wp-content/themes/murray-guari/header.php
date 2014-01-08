@@ -46,22 +46,28 @@
 			<header class="header" role="banner">
 
 				<div id="inner-header" class="wrap clearfix">
-					<div class="search-form clearfix">
-						<span><a href="#">Hablamos español</a></span>
-						<span>(561) 366-9099</span>
-						<span>SEARCH</span>
-						<form id="searchform" method="get" action="<?php bloginfo('siteurl')?>/">
-							<input type="text" name="s" id="s" class="search-box" value="<?php echo wp_specialchars($s, 1); ?>" />
-							<input class="search-button" type="submit" name="submit" value="<?php _e('Search'); ?>" />
-						</form>
-					</div>
-
-
-					<a class="logo clearfix" href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php bloginfo('template_directory'); ?>/library/images/logo.png" alt="Murray & Guari" />
-					</a>
-
-					<div class="tag-container">
-						<span class="tag-line"><?php  bloginfo('description'); ?></span>
+					<div class="header-top clearfix">
+						<div class="search-form clearfix">
+							<span><a href="#">Hablamos español</a></span>
+							<span>(561) 366-9099</span>
+							<span>SEARCH</span>
+							<form id="searchform" method="get" action="<?php bloginfo('siteurl')?>/">
+								<input type="text" name="s" id="s" class="search-box" value="<?php echo wp_specialchars($s, 1); ?>" />
+								<input class="search-button" type="submit" name="submit" value="<?php _e('Search'); ?>" />
+							</form>
+						</div>
+	
+	
+						<a class="logo clearfix" href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php bloginfo('template_directory'); ?>/library/images/logo.png" alt="Murray & Guari" />
+						</a>
+	
+						<div class="tag-container">
+							<span class="tag-line"><?php  bloginfo('description'); ?></span>
+						</div>
+						
+						<div class="building-icon">
+							<img src="<?php bloginfo('template_directory'); ?>/library/images/mg-building-icon.png" alt="Murray & Guari Bulding Icon">
+						</div>
 					</div>
 
 					<nav class="navbar navbar-default" role="navigation">

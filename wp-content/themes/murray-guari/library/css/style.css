@@ -807,14 +807,16 @@ HEADER STYLES
 #inner-header {
   padding-top: 10px;
   font-size: 12px; }
-  #inner-header .logo img {
+  #inner-header .logo {
+    display: inline-block;
     float: left;
     margin: -15px 25px 20px 0; }
   #inner-header .tag-container {
     float: left;
     margin: 50px; }
     #inner-header .tag-container .tag-line {
-      font-style: italic; }
+      font-style: italic;
+      font-size: 18px; }
   #inner-header .search-form {
     width: 100%;
     text-align: right; }

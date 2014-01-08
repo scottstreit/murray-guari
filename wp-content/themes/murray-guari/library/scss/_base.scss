@@ -161,7 +161,8 @@ HEADER STYLES
 	padding-top: 10px;
 	font-size: 12px;
 	
-	.logo img {
+	.logo {
+		display: inline-block;
 		float: left;
 		margin: -15px 25px 20px 0;
 	}
@@ -170,6 +171,7 @@ HEADER STYLES
 		margin: 50px;
 		.tag-line {
 			font-style: italic;
+			font-size: 18px;
 		}
 	}
 
