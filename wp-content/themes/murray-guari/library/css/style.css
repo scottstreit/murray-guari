@@ -848,9 +848,6 @@ the navs on the site so our css is cleaner
 and more scalable.
 */
 .nav {
-  display: none; }
-
-.nav {
   border: 1px solid #ccc;
   border-bottom: 0;
   height: 30px;
