@@ -232,12 +232,6 @@ sub {
 /*
  * Addresses margins set differently in IE6/7.
  */
-dl,
-menu,
-ol,
-ul {
-  margin: 1em 0; }
-
 dd {
   margin: 0 0 0 40px; }
 
@@ -813,10 +807,13 @@ HEADER STYLES
     margin: -15px 25px 20px 0; }
   #inner-header .tag-container {
     float: left;
-    margin: 50px; }
+    margin: 50px 50px 50px 0; }
     #inner-header .tag-container .tag-line {
       font-style: italic;
       font-size: 18px; }
+  #inner-header .building-icon {
+    margin-top: 20px;
+    float: right; }
   #inner-header .search-form {
     width: 100%;
     text-align: right; }
@@ -851,12 +848,30 @@ the navs on the site so our css is cleaner
 and more scalable.
 */
 .nav {
+  display: none; }
+
+.nav {
   border: 1px solid #ccc;
   border-bottom: 0;
+  height: 30px;
+  list-style: none;
+  padding: 0px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 3px 3px #999;
+  background-color: #c4b7a2;
   /* end .menu li */
   /* highlight current page */
   /* end current highlighters */ }
   .nav li {
+    display: block;
+    cursor: pointer;
+    height: 29px;
+    line-height: 28px;
+    text-align: center;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #333;
+    border-left: 1px solid #666;
     /*
     so you really have to rethink your dropdowns for mobile.
     you don't want to have it expand too much because the
@@ -866,10 +881,11 @@ and more scalable.
     */ }
     .nav li a {
       display: block;
+      color: #333;
+      font-size: 12px;
+      font-weight: normal;
+      text-shadow: #ccc 1px 1px 2px;
       text-decoration: none;
-      padding: 10px 10px;
-      background-color: #eee;
-      border-bottom: 1px solid #ccc;
       /*
       remember this is for mobile ONLY, so there's no need
       to even declare hover styles here, you can do it in
@@ -884,6 +900,9 @@ and more scalable.
 /*********************
 		HOME PAGE STYLES
 *********************/
+.slide img {
+  width: 100%; }
+
 .callout {
   border: 1px solid #ccc;
   padding: 10px;
@@ -897,9 +916,6 @@ and more scalable.
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-#content {
-  margin-top: 2.2em; }
-
 /* end .hentry */
 /* want to style individual post classes? Booya! */
 /* post by id (i.e. post-3) */
@@ -1359,50 +1375,61 @@ you can add resource intensive styles.
   NAVIGATION STYLES
   *********************/
   .nav {
-    background: #eee;
-    border: 0;
+    background: #c4b7a2;
+    border: 1px solid #ccc;
     /* end .menu ul li */
     /* highlight current page */
     /* end current highlighters */ }
     .nav li {
       float: left;
       position: relative;
-      /*
+      border-bottom: 1px solid #333;
+      /*	
       plan your menus and drop-downs wisely.
       */
       /* showing sub-menus */ }
+      .nav li:first-child a {
+        padding: 0 13px 0 14px; }
       .nav li a {
         border-bottom: 0;
+        padding: 0 21px;
         /*
         you can use hover styles here even though this size
         has the possibility of being a mobile device.
         */ }
+        .nav li a a.dropdown li.MainMenuSub {
+          background-image: url(/images/ArrowGreyRight.png);
+          background-repeat: no-repeat;
+          background-position: 95% 50%; }
         .nav li a:hover, .nav li a:focus {
-          background-color: #dedede; }
-      .nav li ul.sub-menu,
+          background-color: #7e7e7e;
+          color: #fff; }
+      .nav li ul.dropdown-menu,
       .nav li ul.children {
+        background: #ffffff;
         margin-top: 0;
         border: 1px solid #ccc;
-        border-top: 0;
+        border-top: none;
         position: absolute;
         display: none;
         z-index: 8999;
         /* highlight sub-menu current page */ }
-        .nav li ul.sub-menu li,
+        .nav li ul.dropdown-menu li,
         .nav li ul.children li {
+          border-top: none;
           /*
           if you need to go deeper, go nuts
           just remember deeper menus suck
           for usability. k, bai.
           */ }
-          .nav li ul.sub-menu li a,
+          .nav li ul.dropdown-menu li a,
           .nav li ul.children li a {
             padding-left: 10px;
             border-right: 0;
             display: block;
             width: 180px;
             border-bottom: 1px solid #ccc; }
-          .nav li ul.sub-menu li:last-child a,
+          .nav li ul.dropdown-menu li:last-child a,
           .nav li ul.children li:last-child a {
             border-bottom: 0; }
       .nav li:hover ul {
@@ -1475,7 +1502,10 @@ you can add resource intensive styles.
   
   ******************************************************************/
   .navbar-toggle {
-    display: none; } }
+    display: none; }
+
+  .top-nav {
+    margin: 0; } }
 /*
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.

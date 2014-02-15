@@ -40,43 +40,64 @@ NAVIGATION STYLES
 *********************/
 
 .nav {
-	background: #eee;
-	border: 0;
+	background: #c4b7a2;
+	border: 1px solid #ccc;
 
 	li {
 		float: left;
 		position: relative;
+		border-bottom: 1px solid #333;
+
+		
+		&:first-child a {
+			padding: 0 13px 0 14px;
+		}
 
 		a {
 			border-bottom: 0;
+			padding: 0 21px;
+			
+
+
+
+			a.dropdown {
+				li.MainMenuSub {
+					background-image: url(/images/ArrowGreyRight.png);
+					background-repeat: no-repeat;
+					background-position: 95% 50%;
+				}
+			}
 
 			/*
 			you can use hover styles here even though this size
 			has the possibility of being a mobile device.
 			*/
 			&:hover, &:focus {
-				background-color: #dedede;
+				background-color: #7e7e7e;
+				color: #fff;
 
 			}
+		
 		}
 
 		&:first-child {}
 		&:last-child {}
 
-		/*
+		/*	
 		plan your menus and drop-downs wisely.
 		*/
-		ul.sub-menu,
+		ul.dropdown-menu,
 		ul.children {
+			background: #ffffff;
 			margin-top: 0;
 			border: 1px solid #ccc;
-			border-top: 0;
+			border-top: none;
 			position: absolute;
 			display: none;
 			z-index: 8999;
 
 			li {
-
+				border-top: none;
 				a {
 					padding-left: 10px;
 					border-right: 0;

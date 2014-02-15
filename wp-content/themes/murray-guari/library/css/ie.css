@@ -393,50 +393,61 @@ HEADER STYLES
 NAVIGATION STYLES
 *********************/
 .nav {
-  background: #eee;
-  border: 0;
+  background: #c4b7a2;
+  border: 1px solid #ccc;
   /* end .menu ul li */
   /* highlight current page */
   /* end current highlighters */ }
   .nav li {
     float: left;
     position: relative;
-    /*
+    border-bottom: 1px solid #333;
+    /*	
     plan your menus and drop-downs wisely.
     */
     /* showing sub-menus */ }
+    .nav li:first-child a {
+      padding: 0 13px 0 14px; }
     .nav li a {
       border-bottom: 0;
+      padding: 0 21px;
       /*
       you can use hover styles here even though this size
       has the possibility of being a mobile device.
       */ }
+      .nav li a a.dropdown li.MainMenuSub {
+        background-image: url(/images/ArrowGreyRight.png);
+        background-repeat: no-repeat;
+        background-position: 95% 50%; }
       .nav li a:hover, .nav li a:focus {
-        background-color: #dedede; }
-    .nav li ul.sub-menu,
+        background-color: #7e7e7e;
+        color: #fff; }
+    .nav li ul.dropdown-menu,
     .nav li ul.children {
+      background: #ffffff;
       margin-top: 0;
       border: 1px solid #ccc;
-      border-top: 0;
+      border-top: none;
       position: absolute;
       display: none;
       z-index: 8999;
       /* highlight sub-menu current page */ }
-      .nav li ul.sub-menu li,
+      .nav li ul.dropdown-menu li,
       .nav li ul.children li {
+        border-top: none;
         /*
         if you need to go deeper, go nuts
         just remember deeper menus suck
         for usability. k, bai.
         */ }
-        .nav li ul.sub-menu li a,
+        .nav li ul.dropdown-menu li a,
         .nav li ul.children li a {
           padding-left: 10px;
           border-right: 0;
           display: block;
           width: 180px;
           border-bottom: 1px solid #ccc; }
-        .nav li ul.sub-menu li:last-child a,
+        .nav li ul.dropdown-menu li:last-child a,
         .nav li ul.children li:last-child a {
           border-bottom: 0; }
     .nav li:hover ul {
@@ -503,6 +514,9 @@ be seen on the Desktop.
 ******************************************************************/
 .navbar-toggle {
   display: none; }
+
+.top-nav {
+  margin: 0; }
 
 /* 
 you can call the larger styles if you want, but there's really no need 

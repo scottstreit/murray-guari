@@ -10,6 +10,20 @@ Template Name: Custom Home Page
 
 				<div id="inner-content" class="wrap clearfix">
 
+					<nav class="navbar navbar-default" role="navigation">
+						<div class="navbar-header">
+							<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+								<span class="sr-only">Toggle navigation</span> 
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+
+							<?php bones_main_nav(); ?>
+						</div>
+					</nav>
+
+
 					<div id="slides" class="twlevecol first clearfix">
 
 					<?php

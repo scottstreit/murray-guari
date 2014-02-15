@@ -246,7 +246,7 @@ function bones_main_nav() {
 		'after' => '',                                  // after the menu
 		'link_before' => '',                            // before each link
 		'link_after' => '',                             // after each link
-		'depth' => 3,                                   // limit the depth of the nav
+		'depth' => 2,                                   // limit the depth of the nav
 		'fallback_cb' => 'bones_main_nav_fallback',     // fallback function
 		'walker' => new wp_bootstrap_navwalker()
 	));

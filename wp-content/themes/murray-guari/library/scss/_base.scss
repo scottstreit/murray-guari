@@ -168,13 +168,18 @@ HEADER STYLES
 	}
 	.tag-container {
 		float: left;
-		margin: 50px;
+		margin: 50px 50px 50px 0;
+		
 		.tag-line {
 			font-style: italic;
 			font-size: 18px;
 		}
 	}
 
+	.building-icon {
+		margin-top: 20px;
+		float: right;
+	}
 	.search-form {
 		width: 100%;
 		text-align: right;
@@ -206,7 +211,6 @@ HEADER STYLES
 		}
 	}
 }
-	#logo {}
 
 
 /*********************
@@ -220,19 +224,40 @@ easily write one group of styles for
 the navs on the site so our css is cleaner
 and more scalable.
 */
+.nav {
+	display: none;
+}
 
 .nav {
 	border: 1px solid #ccc;
 	border-bottom: 0;
+	height: 30px;
+	list-style: none;
+	padding: 0px;
+	border: 1px solid #ccc;
+	box-shadow: 0px 3px 3px #999;
+	background-color: #c4b7a2;
 
 	li {
+		display: block;
+		cursor: pointer;
+		height: 29px;
+		line-height: 28px;
+		text-align: center;
+		border-top: 1px solid #fff;
+		border-right: 1px solid #fff;
+		border-bottom: 1px solid #333;
+		border-left: 1px solid #666;
+
 
 		a {
 			display: block;
+			color: #333;
+			font-size: 12px;
+			font-weight: normal;
+			text-shadow: #ccc 1px 1px 2px;
 			text-decoration: none;
-			padding: 10px 10px;
-			background-color: #eee;
-			border-bottom: 1px solid #ccc;
+
 
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -297,6 +322,10 @@ and more scalable.
 /*********************
 		HOME PAGE STYLES
 *********************/
+
+.slide img {
+	width: 100%;
+}
 .callout {
 	border: 1px solid #ccc;
 	padding: 10px;
@@ -316,7 +345,7 @@ POSTS & CONTENT STYLES
 *********************/
 
 #content {
-	margin-top: 2.2em;
+
 }
 
 		.hentry {

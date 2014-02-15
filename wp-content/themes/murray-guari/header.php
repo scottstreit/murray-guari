@@ -56,11 +56,11 @@
 								<input class="search-button" type="submit" name="submit" value="<?php _e('Search'); ?>" />
 							</form>
 						</div>
-	
-	
+
+
 						<a class="logo clearfix" href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php bloginfo('template_directory'); ?>/library/images/logo.png" alt="Murray & Guari" />
 						</a>
-	
+
 						<div class="tag-container">
 							<span class="tag-line"><?php  bloginfo('description'); ?></span>
 						</div>
@@ -70,18 +70,20 @@
 						</div>
 					</div>
 
+<!--
 					<nav class="navbar navbar-default" role="navigation">
 						<div class="navbar-header">
 							<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-ex1-collapse">
 								<span class="sr-only">Toggle navigation</span> 
-								<span class="icon-bar"></span> 
-								<span class="icon-bar"></span> 
-								<span class="icon-bar"></span> 
-							</button> 
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
 
 							<?php bones_main_nav(); ?>
 						</div>
 					</nav>
+-->
 
 				</div>
 
