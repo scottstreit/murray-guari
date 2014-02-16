@@ -1182,11 +1182,13 @@ CONTENT
   .latest-news ul {
     margin: 0; }
     .latest-news ul li {
-      height: 100px;
+      height: 125px;
       padding: 15px 10px 10px 10px;
       border-bottom: 1px solid #999;
       border-right: 1px solid #999;
-      border-left: 1px solid #999; }
+      border-left: 1px solid #999;
+      color: #666;
+      font-size: 12px; }
 
 /*********************
 SIDEBARS & ASIDES
@@ -1364,6 +1366,10 @@ you can add resource intensive styles.
     position: relative;
     float: left;
     margin-left: 2.762430939%; }
+
+  .no-gutter {
+    margin-left: 0;
+    width: 25%; }
 
   .first {
     margin-left: 0; }
