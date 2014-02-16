@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /******************************************************************
 Site Name: Murray & Guari Trial Attorneys
 Author: Scott Streit
@@ -774,7 +775,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
     text-decoration: none; }
 
 h1, .h1 {
-  font-size: 2.5em;
+  font-size: 0.8em;
   line-height: 1.333em; }
 
 h2, .h2 {
@@ -1161,6 +1162,33 @@ COMMENT FORM STYLES
   margin: 0 20px 1.1em; }
 
 /*********************
+CONTENT
+*********************/
+.latest-news {
+  margin-top: 20px; }
+  .latest-news h1 {
+    background: #9d6238;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#9d6238), to(#51222a));
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    margin: 0; }
+    .latest-news h1 a {
+      color: #ffffff;
+      float: right; }
+      .latest-news h1 a:after {
+        content: "▶";
+        padding-left: 10px; }
+  .latest-news ul {
+    margin: 0; }
+    .latest-news ul li {
+      height: 100px;
+      padding: 15px 10px 10px 10px;
+      border-bottom: 1px solid #999;
+      border-right: 1px solid #999;
+      border-left: 1px solid #999; }
+
+/*********************
 SIDEBARS & ASIDES
 *********************/
 .widget ul li {
@@ -1434,6 +1462,12 @@ you can add resource intensive styles.
         display: block; }
 
   /* end .nav */
+  /*********************
+  CONTENT
+  *********************/
+  .home-content {
+    margin-top: 20px; }
+
   /*********************
   SIDEBARS & ASIDES
   *********************/

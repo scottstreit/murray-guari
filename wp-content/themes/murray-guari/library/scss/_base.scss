@@ -125,7 +125,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 }
 
 h1, .h1 {
-	font-size: 2.5em;
+	font-size: 0.8em;
 	line-height: 1.333em;
 }
 
@@ -825,6 +825,44 @@ COMMENT FORM STYLES
 	.nocomments {
 		margin: 0 20px 1.1em;
 	}
+
+/*********************
+CONTENT
+*********************/
+
+.latest-news {
+	margin-top: 20px;
+	h1 {
+		background: #9d6238;
+		background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#9d6238), to(#51222a));
+		height: 30px;
+		line-height: 30px;
+		padding: 0 10px;
+		margin: 0;
+		
+		a {
+			color: #ffffff;
+			float: right;
+			
+			&:after {
+				content: "▶";
+				padding-left: 10px;
+				
+			}
+		}
+	}
+	ul {
+		margin: 0;
+		
+		li {
+			height: 100px;
+			padding: 15px 10px 10px 10px;
+			border-bottom: 1px solid #999;
+			border-right: 1px solid #999;
+			border-left: 1px solid #999;
+		}
+	}
+}
 
 /*********************
 SIDEBARS & ASIDES
