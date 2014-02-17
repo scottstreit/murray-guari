@@ -329,15 +329,48 @@ and more scalable.
 .callout {
 	border: 1px solid #ccc;
 	padding: 10px;
-	height: 155px;
+	height: 175px;
 	
 	a {
-		border-bottom: 1px solid #f68209;
+		//border-bottom: 1px solid #f68209;
 	}
 }
 .slidesjs-navigation {
 	display: none;
 }
+
+.home-content {
+
+	h1 {
+		font-size: 15px;
+		color: #4d1f2a;
+		cursor: pointer;
+		font-weight: normal;
+		border-bottom: 1px solid #f68209;
+		margin: 0;
+		padding-bottom: 9px;
+		margin-bottom: 7px;
+		
+		a {
+			color: #4d1f2a;
+			text-decoration: none;
+		}
+	}
+	
+	ul {
+		list-style: none;
+		float: left;
+		width: 175px;
+		margin-left: 7px;
+		padding: 10px 0 0 0;
+	}
+	
+	img {
+		float: left;
+	}
+	
+}
+
 
 .latest-news {
 	margin-top: 20px;
@@ -348,6 +381,7 @@ and more scalable.
 		line-height: 30px;
 		padding: 0 10px;
 		margin: 0;
+		color: #fff;
 		
 		a {
 			color: #ffffff;

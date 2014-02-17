@@ -173,7 +173,8 @@ mark {
 p,
 pre {
   margin: 1em 0;
-  color: #666; }
+  color: #666;
+  font-size: 0.75em; }
 
 /*
  * Corrects font family set oddly in IE6, S4/5, Chrome.
@@ -906,12 +907,31 @@ and more scalable.
 .callout {
   border: 1px solid #ccc;
   padding: 10px;
-  height: 155px; }
-  .callout a {
-    border-bottom: 1px solid #f68209; }
+  height: 175px; }
 
 .slidesjs-navigation {
   display: none; }
+
+.home-content h1 {
+  font-size: 15px;
+  color: #4d1f2a;
+  cursor: pointer;
+  font-weight: normal;
+  border-bottom: 1px solid #f68209;
+  margin: 0;
+  padding-bottom: 9px;
+  margin-bottom: 7px; }
+  .home-content h1 a {
+    color: #4d1f2a;
+    text-decoration: none; }
+.home-content ul {
+  list-style: none;
+  float: left;
+  width: 175px;
+  margin-left: 7px;
+  padding: 10px 0 0 0; }
+.home-content img {
+  float: left; }
 
 .latest-news {
   margin-top: 20px; }
@@ -921,7 +941,8 @@ and more scalable.
     height: 30px;
     line-height: 30px;
     padding: 0 10px;
-    margin: 0; }
+    margin: 0;
+    color: #fff; }
     .latest-news h1 a {
       color: #ffffff;
       float: right;
