@@ -115,7 +115,8 @@ a:hover {
  */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0; }
+  margin: 0.67em 0;
+  color: #4d1f2a; }
 
 h2 {
   font-size: 1.5em;
@@ -171,7 +172,8 @@ mark {
  */
 p,
 pre {
-  margin: 1em 0; }
+  margin: 1em 0;
+  color: #666; }
 
 /*
  * Corrects font family set oddly in IE6, S4/5, Chrome.
@@ -911,9 +913,48 @@ and more scalable.
 .slidesjs-navigation {
   display: none; }
 
+.latest-news {
+  margin-top: 20px; }
+  .latest-news h1 {
+    background: #9d6238;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#9d6238), to(#51222a));
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    margin: 0; }
+    .latest-news h1 a {
+      color: #ffffff;
+      float: right;
+      text-decoration: none; }
+      .latest-news h1 a:after {
+        content: "▶";
+        padding-left: 10px; }
+  .latest-news ul {
+    margin: 0;
+    display: table; }
+    .latest-news ul li {
+      height: 125px;
+      padding: 15px 10px 10px 10px;
+      border: 1px solid #999;
+      border-top: none;
+      color: #666;
+      font-size: 12px; }
+      .latest-news ul li a {
+        text-decoration: none; }
+        .latest-news ul li a:hover {
+          text-decoration: underline; }
+      .latest-news ul li p {
+        margin: 0; }
+      .latest-news ul li div a {
+        display: table-cell;
+        vertical-align: bottom; }
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/
+#content {
+  margin-bottom: 30px; }
+
 /* end .hentry */
 /* want to style individual post classes? Booya! */
 /* post by id (i.e. post-3) */
@@ -1164,32 +1205,6 @@ COMMENT FORM STYLES
 /*********************
 CONTENT
 *********************/
-.latest-news {
-  margin-top: 20px; }
-  .latest-news h1 {
-    background: #9d6238;
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#9d6238), to(#51222a));
-    height: 30px;
-    line-height: 30px;
-    padding: 0 10px;
-    margin: 0; }
-    .latest-news h1 a {
-      color: #ffffff;
-      float: right; }
-      .latest-news h1 a:after {
-        content: "▶";
-        padding-left: 10px; }
-  .latest-news ul {
-    margin: 0; }
-    .latest-news ul li {
-      height: 125px;
-      padding: 15px 10px 10px 10px;
-      border-bottom: 1px solid #999;
-      border-right: 1px solid #999;
-      border-left: 1px solid #999;
-      color: #666;
-      font-size: 12px; }
-
 /*********************
 SIDEBARS & ASIDES
 *********************/
@@ -1200,7 +1215,25 @@ SIDEBARS & ASIDES
 FOOTER STYLES
 *********************/
 .footer {
-  clear: both; }
+  min-height: 165px;
+  clear: both;
+  border-top: 1px solid #8A7A6A;
+  background: #412715;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #412715 0%, #543217 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #412715), color-stop(100%, #543217));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #412715 0%, #543217 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #412715 0%, #543217 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #412715 0%, #543217 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #412715 0%, #543217 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#412715', endColorstr='#543217',GradientType=0 );
+  /* IE6-9 */ }
 
 /*
 if you checked out the link above:

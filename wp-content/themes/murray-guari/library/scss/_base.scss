@@ -339,12 +339,67 @@ and more scalable.
 	display: none;
 }
 
+.latest-news {
+	margin-top: 20px;
+	h1 {
+		background: #9d6238;
+		background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#9d6238), to(#51222a));
+		height: 30px;
+		line-height: 30px;
+		padding: 0 10px;
+		margin: 0;
+		
+		a {
+			color: #ffffff;
+			float: right;
+			text-decoration: none;
+			
+			
+			
+			&:after {
+				content: "▶";
+				padding-left: 10px;
+				
+			}
+		}
+	}
+	ul {
+		margin: 0;
+		display: table;
+		
+		li {
+			height: 125px;
+			padding: 15px 10px 10px 10px;
+			border: 1px solid #999;
+			border-top: none;
+			color: #666;
+			font-size: 12px;
+			
+			a {
+				text-decoration: none;
+				
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+			p {
+				margin: 0;
+			}
+			div a {
+				display: table-cell;
+				vertical-align: bottom;
+			}
+		}
+	}
+}
+
 
 /*********************
 POSTS & CONTENT STYLES
 *********************/
 
 #content {
+	margin-bottom: 30px;
 
 }
 
@@ -830,41 +885,6 @@ COMMENT FORM STYLES
 CONTENT
 *********************/
 
-.latest-news {
-	margin-top: 20px;
-	h1 {
-		background: #9d6238;
-		background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#9d6238), to(#51222a));
-		height: 30px;
-		line-height: 30px;
-		padding: 0 10px;
-		margin: 0;
-		
-		a {
-			color: #ffffff;
-			float: right;
-			
-			&:after {
-				content: "▶";
-				padding-left: 10px;
-				
-			}
-		}
-	}
-	ul {
-		margin: 0;
-		
-		li {
-			height: 125px;
-			padding: 15px 10px 10px 10px;
-			border-bottom: 1px solid #999;
-			border-right: 1px solid #999;
-			border-left: 1px solid #999;
-			color: #666;
-			font-size: 12px;
-		}
-	}
-}
 
 /*********************
 SIDEBARS & ASIDES
@@ -900,7 +920,18 @@ FOOTER STYLES
 *********************/
 
 .footer {
+	min-height: 165px;
 	clear: both;
+	border-top: 1px solid #8A7A6A;
+	background: #412715; /* Old browsers */
+	background: -moz-linear-gradient(top,  #412715 0%, #543217 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#412715), color-stop(100%,#543217)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #412715 0%,#543217 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #412715 0%,#543217 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #412715 0%,#543217 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #412715 0%,#543217 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#412715', endColorstr='#543217',GradientType=0 ); /* IE6-9 */
+
 }
 
 	/*
