@@ -98,12 +98,14 @@ NAVIGATION STYLES
 
 			li {
 				border-top: none;
+				border-right: 1px solid #999;
 				a {
 					padding-left: 10px;
 					border-right: 0;
 					display: block;
 					width: 180px;
-					border-bottom: 1px solid #ccc;
+					border-bottom: 1px solid #fff;
+					text-align: left;
 
 					&:hover,
 					&:focus {}

@@ -61,9 +61,12 @@ $white:             #fff;
 
 $bones-pink:        #f01d4f;
 $bones-blue:        #1990db;
+$bones-orange:      #f68209;
+$bones-maroon:      #4d1f2a;
+$grey-link:         #666666;
 
-$link-color:        $bones-pink;
-$link-hover:        darken($link-color, 9%);
+$link-color:        $bones-orange;
+$link-hover:        $bones-maroon;
 
 /*
 Here's a great tutorial on how to

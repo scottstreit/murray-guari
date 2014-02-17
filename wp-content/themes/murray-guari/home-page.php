@@ -94,9 +94,9 @@ Template Name: Custom Home Page
 							West Palm Beach, FL 33401<br>
 							<a href="http://maps.google.com/maps?q=1525+N+Flagler+Dr,+West+Palm+Beach,+FL+33401&amp;hl=en&amp;sll=37.0625,-95.677068&amp;sspn=51.887315,107.138672&amp;t=h&amp;z=17" title="Map" target="_blank">View On Google Maps</a>
 							</p>
-							<a href="<?php bloginfo('siteurl'); ?>/Newsleter_Subscribe" target="_self"><img src="/images/ButtonNewsletter.png" vspace="50"></a>
-							<a href="<?php bloginfo('siteurl'); ?>/Contact_Us" target="_self"><img src="/images/ButtonContactUs.png" vspace="50" style="float:right"></a>
-							<p><b>CALL US AT: (561) 366-9099</b></p>
+							<a href="<?php bloginfo('siteurl'); ?>/Newsleter_Subscribe" target="_self"><img src="<?php echo get_stylesheet_directory_uri() ?>/library/images/ButtonNewsletter.png" vspace="50"></a>
+							<a href="<?php bloginfo('siteurl'); ?>/Contact_Us" target="_self"><img src="<?php echo get_stylesheet_directory_uri() ?>/library/images/ButtonContactUs.png" vspace="50" style="float:right"></a>
+							<p style="text-align: center"><b>CALL US AT: (561) 366-9099</b></p>
 						</div>
 						
 						

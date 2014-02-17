@@ -354,7 +354,7 @@ and more scalable.
 			margin-bottom: 7px;
 			
 			a {
-				color: #4d1f2a;
+				color: $bones-maroon;
 				text-decoration: none;
 			}
 		}
@@ -372,13 +372,31 @@ and more scalable.
 				a {
 					line-height: 22px;
 					font-size: 12px;
-					color: #666;
+					color: $grey-link;
+					text-decoration: none;
+					
+					&:hover {
+						color: $bones-maroon;
+						text-decoration: underline;
+					}
+					
+					li:last a {
+						color: $bones-orange;
+					}
 				}
 			}
 		}
 		
 		img {
 			float: left;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+		
+		span {
+			color: #666;
+			font-size: 12px;
+			text-align: center;
 		}
 		
 		.small-type {
