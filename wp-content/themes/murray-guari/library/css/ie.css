@@ -393,6 +393,47 @@ LAYOUT & GRID STYLES
 /*********************
 HEADER STYLES
 *********************/
+#inner-header {
+  padding-top: 10px;
+  font-size: 12px; }
+  #inner-header .header-top {
+    text-align: center; }
+  #inner-header .logo {
+    display: inline-block;
+    float: left;
+    margin: -15px 25px 20px 0; }
+  #inner-header .tag-container {
+    float: left;
+    margin: 50px 50px 50px 0; }
+    #inner-header .tag-container .tag-line {
+      font-style: italic;
+      font-size: 18px; }
+  #inner-header .building-icon {
+    display: none; }
+  #inner-header .search-form {
+    display: block;
+    width: 100%;
+    text-align: right; }
+  #inner-header span {
+    margin-right: 20px; }
+    #inner-header span a {
+      color: #fff;
+      text-decoration: none; }
+  #inner-header #searchform {
+    display: inline-block; }
+    #inner-header #searchform .search-box {
+      width: 150px;
+      height: 16px;
+      border: none;
+      background-color: #dcd5cf; }
+    #inner-header #searchform .search-button {
+      background: url(../images/search-button.png) no-repeat center top;
+      width: 20px;
+      height: 20px;
+      text-indent: -9999px;
+      outline: none;
+      border: none; }
+
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -529,6 +570,11 @@ be seen on the Desktop.
 
 .top-nav {
   margin: 0; }
+
+#inner-header .building-icon {
+  display: block;
+  margin-top: 20px;
+  float: right; }
 
 /* 
 you can call the larger styles if you want, but there's really no need 

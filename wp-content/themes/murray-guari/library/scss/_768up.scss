@@ -33,7 +33,65 @@ HEADER STYLES
 
 .header {}
 
-	#logo {}
+#inner-header {
+	padding-top: 10px;
+	font-size: 12px;
+	
+	.header-top {
+		text-align: center;
+	}
+	.logo {
+		display: inline-block;
+		float: left;
+		margin: -15px 25px 20px 0;
+	}
+	.tag-container {
+		float: left;
+		margin: 50px 50px 50px 0;
+		
+		.tag-line {
+			font-style: italic;
+			font-size: 18px;
+		}
+	}
+
+	.building-icon {
+		display: none;
+//		margin-top: 20px;
+//		float: right;
+	}
+	.search-form {
+		display: block;
+		width: 100%;
+		text-align: right;
+	}
+	span  {
+		margin-right: 20px;
+		
+		a {
+			color: #fff;
+			text-decoration: none;
+		}
+	}
+	#searchform {
+		display: inline-block;
+		
+		.search-box {
+			width: 150px;
+			height: 16px;
+			border: none;
+			background-color: #dcd5cf;
+		}
+		.search-button {
+			background: url(../images/search-button.png) no-repeat center top;
+			width: 20px;
+			height: 20px;
+			text-indent: -9999px;
+			outline: none;
+			border: none;
+		}
+	}
+}
 
 /*********************
 NAVIGATION STYLES
