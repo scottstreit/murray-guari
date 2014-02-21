@@ -901,15 +901,16 @@ MOBILE MENU
 *********************/
 .navbar-toggle {
   position: relative;
-  float: right;
   margin-right: 15px;
   padding: 9px 10px;
   margin-top: 8px;
   margin-bottom: 8px;
-  background-color: transparent;
+  background-color: #53321a;
   background-image: none;
   border: 1px solid transparent;
   border-radius: 4px; }
+  .navbar-toggle .icon-bar + .icon-bar {
+    margin-top: 4px; }
 
 .sr-only {
   position: absolute;
@@ -925,7 +926,8 @@ MOBILE MENU
   display: block;
   width: 22px;
   height: 2px;
-  border-radius: 1px; }
+  border-radius: 1px;
+  background-color: #ffffff; }
 
 /*********************
 		HOME PAGE STYLES
