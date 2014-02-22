@@ -849,6 +849,9 @@ easily write one group of styles for
 the navs on the site so our css is cleaner
 and more scalable.
 */
+.nav.top-nav {
+  display: none; }
+
 .nav {
   border: 1px solid #ccc;
   border-bottom: 0;
@@ -938,7 +941,8 @@ MOBILE MENU
 .callout {
   border: 1px solid #ccc;
   padding: 10px;
-  height: 175px; }
+  height: 175px;
+  margin-top: 30px; }
 
 .slidesjs-navigation {
   display: none; }

@@ -230,8 +230,8 @@ easily write one group of styles for
 the navs on the site so our css is cleaner
 and more scalable.
 */
-.nav {
-	
+.nav.top-nav {
+	display: none;
 }
 
 .nav {
@@ -375,6 +375,7 @@ MOBILE MENU
 	border: 1px solid #ccc;
 	padding: 10px;
 	height: 175px;
+	margin-top: 30px;
 	
 	a {
 		//border-bottom: 1px solid #f68209;
