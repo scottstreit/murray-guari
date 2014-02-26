@@ -13,3 +13,5 @@ wp-content/cache/
 wp-content/backups/
 sitemap.xml.gz
 .DS_Store
+wp-content/themes/murray-guari/library/.sass-cache/
+wp-content/themes/murray-guari/library/scss/.sass-cache/
