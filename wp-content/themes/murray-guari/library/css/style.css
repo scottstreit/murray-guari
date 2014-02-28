@@ -842,16 +842,13 @@ HEADER STYLES
 NAVIGATION STYLES
 *********************/
 /*
-all navs have a .nav class applied via
+#all navs have a menu-main-nav-1 class applied via
 the wp_menu function; this is so we can
 easily write one group of styles for
 the navs on the site so our css is cleaner
 and more scalable.
 */
-.nav.top-nav {
-  display: none; }
-
-.nav {
+#menu-main-nav-1 {
   border: 1px solid #ccc;
   border-bottom: 0;
   height: 30px;
@@ -860,10 +857,11 @@ and more scalable.
   border: 1px solid #ccc;
   box-shadow: 0px 3px 3px #999;
   background-color: #c4b7a2;
+  display: none;
   /* end .menu li */
   /* highlight current page */
   /* end current highlighters */ }
-  .nav li {
+  #menu-main-nav-1 li {
     display: block;
     cursor: pointer;
     height: 29px;
@@ -880,7 +878,7 @@ and more scalable.
     depend on the project. Here's some great info on it:
     http://www.alistapart.com/articles/organizing-mobile/
     */ }
-    .nav li a {
+    #menu-main-nav-1 li a {
       display: block;
       color: #333;
       font-size: 12px;
@@ -893,11 +891,11 @@ and more scalable.
       the style.scss file where it's relevant. We want to
       keep this file as small as possible!
       */ }
-    .nav li ul.sub-menu li a,
-    .nav li ul.children li a {
+    #menu-main-nav-1 li ul.sub-menu li a,
+    #menu-main-nav-1 li ul.children li a {
       padding-left: 30px; }
 
-/* end .nav */
+/* end menu-main-nav-1 */
 /*********************
 MOBILE MENU
 *********************/
@@ -939,9 +937,10 @@ MOBILE MENU
 
 .callout {
   border: 1px solid #ccc;
+  margin-top: 20px;
   padding: 10px;
   height: 175px;
-  margin-top: 30px; }
+  overflow: hidden; }
 
 .slidesjs-navigation {
   display: none; }
@@ -1562,13 +1561,17 @@ you can add resource intensive styles.
   /*********************
   NAVIGATION STYLES
   *********************/
-  .nav {
+  .navbar-toggle {
+    display: none; }
+
+  #menu-main-nav-1 {
     background: #c4b7a2;
     border: 1px solid #ccc;
+    display: block;
     /* end .menu ul li */
     /* highlight current page */
     /* end current highlighters */ }
-    .nav li {
+    #menu-main-nav-1 li {
       float: left;
       position: relative;
       border-bottom: 1px solid #333;
@@ -1576,24 +1579,25 @@ you can add resource intensive styles.
       plan your menus and drop-downs wisely.
       */
       /* showing sub-menus */ }
-      .nav li:first-child a {
-        padding: 0 13px 0 14px; }
-      .nav li a {
+      #menu-main-nav-1 li:first-child a {
+        padding: 0 15px 0 16px; }
+      #menu-main-nav-1 li a {
         border-bottom: 0;
-        padding: 0 21px;
+        padding: 0 12px;
+        font-size: 10px;
         /*
         you can use hover styles here even though this size
         has the possibility of being a mobile device.
         */ }
-        .nav li a a.dropdown li.MainMenuSub {
+        #menu-main-nav-1 li a a.dropdown li.MainMenuSub {
           background-image: url(/images/ArrowGreyRight.png);
           background-repeat: no-repeat;
           background-position: 95% 50%; }
-        .nav li a:hover, .nav li a:focus {
+        #menu-main-nav-1 li a:hover, #menu-main-nav-1 li a:focus {
           background-color: #7e7e7e;
           color: #fff; }
-      .nav li ul.dropdown-menu,
-      .nav li ul.children {
+      #menu-main-nav-1 li ul.dropdown-menu,
+      #menu-main-nav-1 li ul.children {
         background: #ffffff;
         margin-top: 0;
         border: 1px solid #ccc;
@@ -1602,8 +1606,8 @@ you can add resource intensive styles.
         display: none;
         z-index: 8999;
         /* highlight sub-menu current page */ }
-        .nav li ul.dropdown-menu li,
-        .nav li ul.children li {
+        #menu-main-nav-1 li ul.dropdown-menu li,
+        #menu-main-nav-1 li ul.children li {
           border-top: none;
           border-right: 1px solid #999;
           /*
@@ -1611,28 +1615,25 @@ you can add resource intensive styles.
           just remember deeper menus suck
           for usability. k, bai.
           */ }
-          .nav li ul.dropdown-menu li a,
-          .nav li ul.children li a {
+          #menu-main-nav-1 li ul.dropdown-menu li a,
+          #menu-main-nav-1 li ul.children li a {
             padding-left: 10px;
             border-right: 0;
             display: block;
             width: 180px;
             border-bottom: 1px solid #fff;
             text-align: left; }
-          .nav li ul.dropdown-menu li:last-child a,
-          .nav li ul.children li:last-child a {
+          #menu-main-nav-1 li ul.dropdown-menu li:last-child a,
+          #menu-main-nav-1 li ul.children li:last-child a {
             border-bottom: 0; }
-      .nav li:hover ul {
+      #menu-main-nav-1 li:hover ul {
         top: auto;
         display: block; }
 
-  /* end .nav */
+  /* end #menu-main-nav-1 */
   /*********************
   CONTENT
   *********************/
-  .home-content {
-    margin-top: 20px; }
-
   /*********************
   SIDEBARS & ASIDES
   *********************/
@@ -1697,16 +1698,24 @@ you can add resource intensive styles.
   be seen on the Desktop. 
   
   ******************************************************************/
-  .navbar-toggle {
-    display: none; }
-
   .top-nav {
     margin: 0; }
 
   #inner-header .building-icon {
     display: block;
     margin-top: 20px;
-    float: right; } }
+    float: right; }
+
+  /*********************
+  NAVIGATION STYLES
+  *********************/
+  #menu-main-nav-1 li:first-child a {
+    padding: 0 20px 0 23px; }
+  #menu-main-nav-1 li a {
+    padding: 0 20px;
+    font-size: 12px; }
+
+  /* end #menu-main-nav-1 */ }
 /*
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.

@@ -224,17 +224,17 @@ NAVIGATION STYLES
 *********************/
 
 /*
-all navs have a .nav class applied via
+#all navs have a menu-main-nav-1 class applied via
 the wp_menu function; this is so we can
 easily write one group of styles for
 the navs on the site so our css is cleaner
 and more scalable.
 */
-.nav.top-nav {
-	display: none;
+#menu-main-nav-1 {
+	
 }
 
-.nav {
+#menu-main-nav-1 {
 	border: 1px solid #ccc;
 	border-bottom: 0;
 	height: 30px;
@@ -243,6 +243,7 @@ and more scalable.
 	border: 1px solid #ccc;
 	box-shadow: 0px 3px 3px #999;
 	background-color: #c4b7a2;
+	display: none;
 
 	li {
 		display: block;
@@ -321,7 +322,7 @@ and more scalable.
 
 	}  /* end current highlighters */
 
-} /* end .nav */
+} /* end menu-main-nav-1 */
 
 /*********************
 MOBILE MENU
@@ -373,10 +374,10 @@ MOBILE MENU
 }
 .callout {
 	border: 1px solid #ccc;
+	margin-top: 20px;
 	padding: 10px;
 	height: 175px;
-	margin-top: 30px;
-	
+	overflow: hidden;
 	a {
 		//border-bottom: 1px solid #f68209;
 	}
@@ -1076,3 +1077,4 @@ FOOTER STYLES
 
 
 	.copyright {}
+

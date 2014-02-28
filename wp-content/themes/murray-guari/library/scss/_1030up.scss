@@ -8,9 +8,7 @@ This is the desktop size. It's larger than an iPad so it will only
 be seen on the Desktop. 
 
 ******************************************************************/
-.navbar-toggle {
-	display: none;
-}
+
 .top-nav {
 	margin: 0;
 }
@@ -22,3 +20,21 @@ be seen on the Desktop.
 		float: right;
 	}
 }
+
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+#menu-main-nav-1 {
+   li {
+      &:first-child a {
+         padding: 0 20px 0 23px;
+      }
+
+      a {
+         padding: 0 20px;
+         font-size: 12px;
+      }
+   }
+} /* end #menu-main-nav-1 */
