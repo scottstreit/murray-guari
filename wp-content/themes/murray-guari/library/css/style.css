@@ -912,6 +912,22 @@ and more scalable.
       padding-left: 30px; }
 
 /* end menu-main-nav-1 */
+#menu-footer-menu > li {
+  float: left;
+  width: 157px;
+  min-height: 120px;
+  font-size: 12px; }
+  #menu-footer-menu > li > a {
+    font-weight: bold;
+    text-transform: uppercase; }
+  #menu-footer-menu > li li {
+    font-size: 10px; }
+#menu-footer-menu a {
+  color: #fff;
+  text-decoration: none; }
+  #menu-footer-menu a:hover {
+    color: #f68209; }
+
 /*********************
 MOBILE MENU
 *********************/
@@ -1078,6 +1094,9 @@ POSTS & CONTENT STYLES
 *********************/
 #content {
   margin-bottom: 30px; }
+
+.hentry footer {
+  margin-top: 30px; }
 
 /* end .hentry */
 /* want to style individual post classes? Booya! */
@@ -1358,6 +1377,11 @@ FOOTER STYLES
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#412715', endColorstr='#543217',GradientType=0 );
   /* IE6-9 */ }
+  .footer h3 {
+    font-size: 1em; }
+  .footer h4 {
+    font-size: 0.9em;
+    margin: 1em 0; }
 
 /*
 if you checked out the link above:
@@ -1369,6 +1393,9 @@ override these styles for the desktop
 view.
 */
 /* end .footer-links */
+.copyright {
+  color: #fff; }
+
 /*
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's

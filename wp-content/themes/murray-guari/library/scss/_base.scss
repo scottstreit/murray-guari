@@ -347,6 +347,41 @@ and more scalable.
 
 } /* end menu-main-nav-1 */
 
+
+
+#menu-footer-menu {
+
+	>li {
+		float: left;
+		width: 157px;
+		min-height: 120px;
+		font-size: 12px;
+
+		>a {
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+
+		li {
+			font-size: 10px;
+		}
+	}
+
+	a {
+		color: #fff;
+		text-decoration: none;
+		
+		&:hover {
+			color: $bones-orange;
+		}
+
+	}
+
+
+}
+
+
+
 /*********************
 MOBILE MENU
 *********************/
@@ -586,7 +621,9 @@ POSTS & CONTENT STYLES
 
 			header {}
 
-			footer {}
+			footer {	
+				margin-top: 30px;
+			}
 
 		} /* end .hentry */
 
@@ -1111,6 +1148,16 @@ FOOTER STYLES
 	background: linear-gradient(to bottom,  #412715 0%,#543217 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#412715', endColorstr='#543217',GradientType=0 ); /* IE6-9 */
 
+
+	h3 {
+		font-size: 1em;
+	}
+
+	h4 {
+		font-size: 0.9em;
+		margin: 1em 0;
+	}
+
 }
 
 	/*
@@ -1133,5 +1180,7 @@ FOOTER STYLES
 	} /* end .footer-links */
 
 
-	.copyright {}
+	.copyright {
+		color: #fff;
+	}
 
