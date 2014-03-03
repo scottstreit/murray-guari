@@ -27,15 +27,15 @@ Template Name: Custom Home Page
 					<div id="slides" class="twlevecol first clearfix">
 
 					<?php
-						$args = array('post_type' => 'slide', 'posts_per_page' => 5);
+						$args = array('post_type' => 'slide', 'posts_per_page' => 5, 'orderby' => 'title', 'order'=>'ASC');
 						$loop = new WP_Query($args);
 						while ($loop->have_posts()) : $loop->the_post();
 					?>
 						<div class="slide">
-					<?php
-						the_post_thumbnail('bones-slide');
-						the_content();
-					?>
+							<?php	the_post_thumbnail('bones-slide'); ?>
+							<div>
+								<?php the_content(); ?>
+							</div>
 						</div>
 					<?php endwhile; ?>
 					</div>

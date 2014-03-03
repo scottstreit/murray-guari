@@ -228,6 +228,12 @@ CONTENT
 
 }
 
+.slide {
+	>div {
+		display: block;
+	}
+}
+
 /*********************
 SIDEBARS & ASIDES
 *********************/
