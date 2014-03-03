@@ -1043,7 +1043,8 @@ MOBILE MENU
       border: 1px solid #999;
       border-top: none;
       color: #666;
-      font-size: 12px; }
+      font-size: 12px;
+      overflow: hidden; }
       .latest-news ul li a {
         text-decoration: none; }
         .latest-news ul li a:hover {
