@@ -102,6 +102,7 @@ NAVIGATION STYLES
 }
 
 #menu-main-nav-1 {
+	height: 30px;
 	background: #c4b7a2;
 	border: 1px solid #ccc;
 	display: block;
@@ -109,21 +110,20 @@ NAVIGATION STYLES
 	li {
 		float: left;
 		position: relative;
+		height: 29px;
+		line-height: 28px;
 		border-bottom: 1px solid #333;
+		text-align: center;
 
-		
 		&:first-child a {
-			padding: 0 15px 0 16px;
+			padding: 0 16px 0 13px;
 		}
 
 		a {
 			border-bottom: 0;
-			padding: 0 12px;
+			padding: 0 11px;
 			font-size: 10px;
-			
-
-
-
+		
 			a.dropdown {
 				li.MainMenuSub {
 					background-image: url(/images/ArrowGreyRight.png);

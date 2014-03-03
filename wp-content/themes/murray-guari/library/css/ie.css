@@ -441,6 +441,7 @@ NAVIGATION STYLES
   display: none; }
 
 #menu-main-nav-1 {
+  height: 30px;
   background: #c4b7a2;
   border: 1px solid #ccc;
   display: block;
@@ -450,16 +451,19 @@ NAVIGATION STYLES
   #menu-main-nav-1 li {
     float: left;
     position: relative;
+    height: 29px;
+    line-height: 28px;
     border-bottom: 1px solid #333;
+    text-align: center;
     /*	
     plan your menus and drop-downs wisely.
     */
     /* showing sub-menus */ }
     #menu-main-nav-1 li:first-child a {
-      padding: 0 15px 0 16px; }
+      padding: 0 16px 0 13px; }
     #menu-main-nav-1 li a {
       border-bottom: 0;
-      padding: 0 12px;
+      padding: 0 11px;
       font-size: 10px;
       /*
       you can use hover styles here even though this size
@@ -582,9 +586,9 @@ be seen on the Desktop.
 NAVIGATION STYLES
 *********************/
 #menu-main-nav-1 li:first-child a {
-  padding: 0 20px 0 23px; }
+  padding: 0 17px 0 20px; }
 #menu-main-nav-1 li a {
-  padding: 0 20px;
+  padding: 0 19px;
   font-size: 12px; }
 
 /* end #menu-main-nav-1 */

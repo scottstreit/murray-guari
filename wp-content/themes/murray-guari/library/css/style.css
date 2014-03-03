@@ -814,7 +814,7 @@ HEADER STYLES
     margin: 20px auto; }
     #inner-header .tag-container .tag-line {
       font-style: italic;
-      font-size: 18px; }
+      font-size: 15px; }
   #inner-header .building-icon {
     display: none; }
   #inner-header .search-form {
@@ -850,24 +850,23 @@ the navs on the site so our css is cleaner
 and more scalable.
 */
 #menu-main-nav-1 {
+  display: none;
   border: 1px solid #ccc;
   border-bottom: 0;
-  height: 30px;
   list-style: none;
-  padding: 0px;
+  padding: 0;
+  margin: 0 0 10px 0;
   border: 1px solid #ccc;
   box-shadow: 0px 3px 3px #999;
   background-color: #c4b7a2;
-  display: none;
   /* end .menu li */
   /* highlight current page */
   /* end current highlighters */ }
   #menu-main-nav-1 li {
     display: block;
     cursor: pointer;
-    height: 29px;
-    line-height: 28px;
-    text-align: center;
+    line-height: 40px;
+    text-align: left;
     border-top: 1px solid #fff;
     border-right: 1px solid #fff;
     border-bottom: 1px solid #333;
@@ -879,10 +878,14 @@ and more scalable.
     depend on the project. Here's some great info on it:
     http://www.alistapart.com/articles/organizing-mobile/
     */ }
+    #menu-main-nav-1 li.menu-item-has-children > a:after {
+      color: #333;
+      content: ' ▾'; }
     #menu-main-nav-1 li a {
       display: block;
+      padding: 0 20px;
       color: #333;
-      font-size: 12px;
+      font-size: 18px;
       font-weight: normal;
       text-shadow: #ccc 1px 1px 2px;
       text-decoration: none;
@@ -892,6 +895,18 @@ and more scalable.
       the style.scss file where it's relevant. We want to
       keep this file as small as possible!
       */ }
+    #menu-main-nav-1 li:hover ul {
+      display: block; }
+    #menu-main-nav-1 li ul {
+      display: none; }
+    #menu-main-nav-1 li li {
+      background-color: #e2dbd1;
+      border-top: 1px solid #666;
+      border-right: 1px solid #999;
+      border-bottom: 1px solid #fff;
+      border-left: 1px solid #fff; }
+      #menu-main-nav-1 li li a {
+        padding: 0 40px; }
     #menu-main-nav-1 li ul.sub-menu li a,
     #menu-main-nav-1 li ul.children li a {
       padding-left: 30px; }
@@ -900,12 +915,15 @@ and more scalable.
 /*********************
 MOBILE MENU
 *********************/
-.navbar-toggle {
+.navbar-header {
   position: relative;
-  margin-right: 15px;
+  min-height: 45px; }
+
+.navbar-toggle {
+  position: absolute;
+  right: 5px;
+  top: 5px;
   padding: 9px 10px;
-  margin-top: 8px;
-  margin-bottom: 8px;
   background-color: #53321a;
   background-image: none;
   border: 1px solid transparent;
@@ -1589,6 +1607,7 @@ you can add resource intensive styles.
     display: none; }
 
   #menu-main-nav-1 {
+    height: 30px;
     background: #c4b7a2;
     border: 1px solid #ccc;
     display: block;
@@ -1598,16 +1617,19 @@ you can add resource intensive styles.
     #menu-main-nav-1 li {
       float: left;
       position: relative;
+      height: 29px;
+      line-height: 28px;
       border-bottom: 1px solid #333;
+      text-align: center;
       /*	
       plan your menus and drop-downs wisely.
       */
       /* showing sub-menus */ }
       #menu-main-nav-1 li:first-child a {
-        padding: 0 15px 0 16px; }
+        padding: 0 16px 0 13px; }
       #menu-main-nav-1 li a {
         border-bottom: 0;
-        padding: 0 12px;
+        padding: 0 11px;
         font-size: 10px;
         /*
         you can use hover styles here even though this size
@@ -1737,9 +1759,9 @@ you can add resource intensive styles.
   NAVIGATION STYLES
   *********************/
   #menu-main-nav-1 li:first-child a {
-    padding: 0 20px 0 23px; }
+    padding: 0 17px 0 20px; }
   #menu-main-nav-1 li a {
-    padding: 0 20px;
+    padding: 0 19px;
     font-size: 12px; }
 
   /* end #menu-main-nav-1 */

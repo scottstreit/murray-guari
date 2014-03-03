@@ -27,6 +27,16 @@ if (!window.getComputedStyle) {
 }
 // as the page loads, call these scripts
 jQuery(document).ready(function($) {
+  	// Main Menu Toggle
+  	$(document).on('click','.navbar-toggle',function() {
+		if ($('#menu-main-nav-1').is(':visible')) {
+			$('#menu-main-nav-1').hide();				
+		} else {
+			$('#menu-main-nav-1').show();
+		}
+	});
+
+
 /*
 	Responsive jQuery is a tricky thing.
 	There's a bunch of different ways to handle
@@ -40,6 +50,7 @@ jQuery(document).ready(function($) {
 	if (responsive_viewport > 481) {} /* end larger than 481px */
 	/* if is above or equal to 768px */
 	if (responsive_viewport >= 768) { /* load gravatars */
+		$('#menu-main-nav-1').show();
 		$('.comment img[data-gravatar]').each(function() {
 			$(this).attr('src', $(this).attr('data-gravatar'));
 		});
@@ -111,3 +122,4 @@ jQuery(document).ready(function($) {
 	w.addEventListener("orientationchange", restoreZoom, false);
 	w.addEventListener("devicemotion", checkTilt, false);
 })(this);
+

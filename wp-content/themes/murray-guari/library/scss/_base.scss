@@ -176,7 +176,7 @@ HEADER STYLES
 		
 		.tag-line {
 			font-style: italic;
-			font-size: 18px;
+			font-size: 15px;
 		}
 	}
 
@@ -231,36 +231,37 @@ the navs on the site so our css is cleaner
 and more scalable.
 */
 #menu-main-nav-1 {
-	
-}
-
-#menu-main-nav-1 {
+	display: none;
 	border: 1px solid #ccc;
 	border-bottom: 0;
-	height: 30px;
 	list-style: none;
-	padding: 0px;
+	padding: 0;
+	margin: 0 0 10px 0;
 	border: 1px solid #ccc;
 	box-shadow: 0px 3px 3px #999;
-	background-color: #c4b7a2;
-	display: none;
+	background-color: $menu-back;
 
 	li {
 		display: block;
 		cursor: pointer;
-		height: 29px;
-		line-height: 28px;
-		text-align: center;
+		line-height: 40px;
+		text-align: left;
 		border-top: 1px solid #fff;
 		border-right: 1px solid #fff;
 		border-bottom: 1px solid #333;
 		border-left: 1px solid #666;
 
+		&.menu-item-has-children>a:after {
+			color: #333;
+			content: ' ▾';
+		}
+
 
 		a {
 			display: block;
+			padding: 0 20px;
 			color: #333;
-			font-size: 12px;
+			font-size: 18px;
 			font-weight: normal;
 			text-shadow: #ccc 1px 1px 2px;
 			text-decoration: none;
@@ -274,6 +275,28 @@ and more scalable.
 			*/
 			&:hover, &:focus {
 
+			}
+
+
+		}
+
+		&:hover ul {
+			display: block;
+		}
+
+		ul {
+			display: none;
+		}
+
+		li {
+			background-color: lighten($menu-back, 15%);
+			border-top: 1px solid #666;
+			border-right: 1px solid #999;
+			border-bottom: 1px solid #fff;
+			border-left: 1px solid #fff;
+
+			a {
+				padding: 0 40px;
 			}
 		}
 
@@ -327,13 +350,15 @@ and more scalable.
 /*********************
 MOBILE MENU
 *********************/
-
-.navbar-toggle {
+.navbar-header {
 	position: relative;
-	margin-right: 15px;
+	min-height: 45px;
+}
+.navbar-toggle {
+	position: absolute;
+	right: 5px;
+	top: 5px;
 	padding: 9px 10px;
-	margin-top: 8px;
-	margin-bottom: 8px;
 	background-color: $bones-brown;
 	background-image: none;
 	border: 1px solid transparent;
