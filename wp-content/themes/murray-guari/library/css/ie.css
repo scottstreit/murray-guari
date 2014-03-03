@@ -440,8 +440,12 @@ NAVIGATION STYLES
 .navbar-toggle {
   display: none; }
 
+.navbar-header {
+  min-height: 30px; }
+
 #menu-main-nav-1 {
   height: 30px;
+  margin: 0;
   background: #c4b7a2;
   border: 1px solid #ccc;
   display: block;
@@ -514,8 +518,10 @@ NAVIGATION STYLES
 /*********************
 CONTENT
 *********************/
-.slide > div {
-  display: block; }
+#slides {
+  margin-top: -10px; }
+  #slides .slide > div {
+    display: block; }
 
 /*********************
 SIDEBARS & ASIDES

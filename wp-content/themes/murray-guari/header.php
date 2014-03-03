@@ -87,4 +87,17 @@
 
 				</div>
 
+				<div class="mainmenu wrap clearfix">
+					<nav class="navbar navbar-default" role="navigation">
+						<div class="navbar-header">
+							<?php bones_main_nav(); ?>
+							<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+								<span class="sr-only">Toggle navigation</span> 
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+					</nav>
+				</div>
 			</header>
