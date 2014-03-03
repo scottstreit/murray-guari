@@ -987,12 +987,12 @@ MOBILE MENU
   height: 180px;
   background: rgba(255, 255, 255, 0.75);
   padding: 18px 25px;
-  font-size: 0.8em;
+  font-size: 1.15em;
   border: 1px solid #999;
   box-shadow: 2px 2px 5px #555;
   color: #444; }
   .slide > div h2 {
-    line-height: 1.2em;
+    line-height: 1.5em;
     margin: 0;
     color: #4d1f2a;
     font-weight: bold;
