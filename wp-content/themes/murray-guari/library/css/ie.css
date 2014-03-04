@@ -438,6 +438,11 @@ HEADER STYLES
       outline: none;
       border: none; }
 
+.callout .SocialIcons img {
+  margin-left: 4px; }
+.callout img.hide7, .callout .button {
+  display: none; }
+
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -599,6 +604,11 @@ NAVIGATION STYLES
 /* end #menu-main-nav-1 */
 .slide > div {
   top: 70px; }
+
+.callout .SocialIcons > img {
+  margin-left: 7px; }
+.callout img.hide7, .callout .button {
+  display: block; }
 
 /* 
 you can call the larger styles if you want, but there's really no need 

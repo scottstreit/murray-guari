@@ -1681,6 +1681,11 @@ you can add resource intensive styles.
         outline: none;
         border: none; }
 
+  .callout .SocialIcons img {
+    margin-left: 4px; }
+  .callout img.hide7, .callout .button {
+    display: none; }
+
   /*********************
   NAVIGATION STYLES
   *********************/
@@ -1848,7 +1853,12 @@ you can add resource intensive styles.
 
   /* end #menu-main-nav-1 */
   .slide > div {
-    top: 70px; } }
+    top: 70px; }
+
+  .callout .SocialIcons > img {
+    margin-left: 7px; }
+  .callout img.hide7, .callout .button {
+    display: block; } }
 /*
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.
