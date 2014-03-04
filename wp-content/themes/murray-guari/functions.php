@@ -170,6 +170,40 @@ function bones_wpsearch($form) {
 } // don't remove this bracket!
 
 
+/* Register a Custom Post Type (Snippet) */
+add_action('init', 'snippet_init');
+function snippet_init() {
+	$labels = array(
+		'name' => _x('Snippets', 'post type general name'),
+		'singular_name' => _x('Snippet', 'post type singular name'),
+		'add_new' => _x('Add New', 'Snippet'),
+		'add_new_item' => __('Add New Snippet'),
+		'edit_item' => __('Edit Snippet'),
+		'new_item' => __('New Snippet'),
+		'view_item' => __('View Snippet'),
+		'search_items' => __('Search Snippets'),
+		'not_found' => __('No Snippets found'),
+		'not_found_in_trash' => __('No Snippets found in Trash'), 
+		'parent_item_colon' => '',
+		'menu_name' => 'Snippets'
+	);
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'publicly_queryable' => false,
+		'show_ui' => true, 
+		'show_in_menu' => true, 
+		'query_var' => true,
+		'rewrite' => true,
+		'capability_type' => 'post',
+		'has_archive' => true, 
+		'hierarchical' => false,
+		'menu_position' => 22,
+		'supports' => array('title', 'editor', 'thumbnail')
+	); 
+	register_post_type('snippet', $args);
+}
+
 /* Register a Custom Post Type (Slide) */
 add_action('init', 'slide_init');
 function slide_init() {
@@ -242,6 +276,10 @@ function slide_help_text($contextual_help, $screen_id, $screen) {
 	return $contextual_help;
 }
 
-
-
-?>
+/* Return a Snippet, Filter Shortcodes */
+function get_snippet($name) {
+	$snippet = get_page_by_title($name,'ARRAY_N','Snippet');
+	if (!empty($snippet)) {
+		echo do_shortcode($snippet[4]);
+	}
+}

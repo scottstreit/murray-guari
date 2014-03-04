@@ -1,17 +1,26 @@
 				<div id="sidebar1" class="sidebar fourcol last clearfix" role="complementary">
 
-					<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
+					<div class="callout">
+						<?php get_snippet('Contact'); ?>
+					</div>
+					<div class="callout">
+						<?php get_snippet('Videos'); ?>
+					</div>
 
-						<?php dynamic_sidebar( 'sidebar1' ); ?>
+					<div class="callout">
 
-					<?php else : ?>
+						<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
 
-						<?php // This content shows up if there are no widgets defined in the backend. ?>
+							<?php dynamic_sidebar( 'sidebar1' ); ?>
 
-						<div class="alert alert-help">
-							<p><?php _e( 'Please activate some Widgets.', 'bonestheme' );  ?></p>
-						</div>
+						<?php else : ?>
 
-					<?php endif; ?>
+							<?php // This content shows up if there are no widgets defined in the backend. ?>
 
+							<div class="alert alert-help">
+								<p><?php _e( 'Please activate some Widgets.', 'bonestheme' );  ?></p>
+							</div>
+
+						<?php endif; ?>
+					</div>
 				</div>

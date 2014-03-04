@@ -1001,88 +1001,95 @@ MOBILE MENU
     list-style-type: disc;
     margin-left: 18px; }
 
+.slidesjs-navigation {
+  display: none; }
+
+.sidebar .callout {
+  margin-top: 10px; }
+  .sidebar .callout:last-child {
+    height: auto; }
+  .sidebar .callout ul {
+    width: auto; }
+
 .callout {
   border: 1px solid #ccc;
   margin-top: 20px;
   padding: 10px;
   height: 175px;
   overflow: hidden; }
-
-.slidesjs-navigation {
-  display: none; }
-
-.home-content .callout h1 {
-  font-size: 15px;
-  color: #4d1f2a;
-  cursor: pointer;
-  font-weight: normal;
-  border-bottom: 1px solid #f68209;
-  margin: 0;
-  padding-bottom: 9px;
-  margin-bottom: 7px; }
-  .home-content .callout h1 a {
+  .callout h4 {
+    font-size: 15px;
     color: #4d1f2a;
-    text-decoration: none; }
-.home-content .callout ul {
-  list-style: none;
-  float: left;
-  width: 175px;
-  margin: 0 0 0 7px;
-  padding: 0; }
-  .home-content .callout ul li {
-    color: #666;
-    font-size: 12px; }
-    .home-content .callout ul li a {
-      line-height: 22px;
-      font-size: 12px;
-      color: #666666;
+    cursor: pointer;
+    font-weight: normal;
+    border-bottom: 1px solid #f68209;
+    margin: 0;
+    padding-bottom: 9px;
+    margin-bottom: 7px; }
+    .callout h4 a {
+      color: #4d1f2a;
       text-decoration: none; }
-      .home-content .callout ul li a:hover {
-        color: #4d1f2a;
-        text-decoration: underline; }
-      .home-content .callout ul li a li:last a {
-        color: #f68209; }
-.home-content .callout img {
-  float: left;
-  margin-top: 0;
-  margin-bottom: 0; }
-.home-content .callout span {
-  color: #666;
-  font-size: 12px;
-  text-align: center; }
-.home-content .callout .small-type {
-  color: #666;
-  font-size: 11px;
-  width: 180px;
-  height: 70px;
-  line-height: 18px;
-  margin: 0 0 10px 7px;
-  white-space: nowrap;
-  display: inline-block; }
+  .callout ul {
+    list-style: none;
+    float: left;
+    width: 175px;
+    margin: 0 0 0 7px;
+    padding: 0; }
+    .callout ul li {
+      color: #666;
+      font-size: 12px; }
+      .callout ul li a {
+        line-height: 22px;
+        font-size: 12px;
+        color: #666666;
+        text-decoration: none; }
+        .callout ul li a:hover {
+          color: #4d1f2a;
+          text-decoration: underline; }
+        .callout ul li a li:last a {
+          color: #f68209; }
+  .callout img {
+    float: left;
+    margin-top: 0;
+    margin-bottom: 0; }
+  .callout span {
+    color: #666;
+    font-size: 12px;
+    text-align: center; }
+  .callout .small-type {
+    color: #666;
+    font-size: 11px;
+    width: 180px;
+    height: 70px;
+    line-height: 18px;
+    margin: 0 0 10px 7px;
+    white-space: nowrap;
+    display: inline-block; }
 
 .latest-news {
   margin-top: 20px; }
-  .latest-news h1 {
+  .latest-news h6 {
     background: #9d6238;
     background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#9d6238), to(#51222a));
     height: 30px;
     line-height: 30px;
     padding: 0 10px;
     margin: 0;
-    color: #fff; }
-    .latest-news h1 a {
+    color: #fff;
+    font-size: 1.2em; }
+    .latest-news h6 a {
       color: #ffffff;
       float: right;
       text-decoration: none; }
-      .latest-news h1 a:after {
+      .latest-news h6 a:after {
         content: "▶";
         padding-left: 10px; }
   .latest-news ul {
     margin: 0;
     display: table; }
     .latest-news ul li {
-      height: 125px;
-      padding: 15px 10px 10px 10px;
+      height: 130px;
+      padding: 5px 10px 10px 10px;
       border: 1px solid #999;
       border-top: none;
       color: #666;
@@ -1368,6 +1375,17 @@ CONTENT
 /*********************
 SIDEBARS & ASIDES
 *********************/
+.sidebar .post-date {
+  display: block;
+  color: #f68209;
+  text-align: right; }
+.sidebar .widget_recent_entries li {
+  margin-left: -5px;
+  padding: 10px;
+  border-bottom: 1px solid #f68209; }
+  .sidebar .widget_recent_entries li:last-child {
+    border: 0; }
+
 .widget ul li {
   /* deep nesting */ }
 
@@ -1736,22 +1754,16 @@ you can add resource intensive styles.
   /*********************
   SIDEBARS & ASIDES
   *********************/
-  .sidebar {
-    margin-top: 2.2em; }
-
   .widgettitle {
     border-bottom: 2px solid #444;
     margin-bottom: 0.75em; }
 
-  .widget {
-    padding: 0 10px;
-    margin: 2.2em 0; }
-    .widget ul li {
-      margin-bottom: 0.75em;
-      /* deep nesting */ }
-      .widget ul li ul {
-        margin-top: 0.75em;
-        padding-left: 1em; }
+  .widget ul li {
+    margin-bottom: 0.75em;
+    /* deep nesting */ }
+    .widget ul li ul {
+      margin-top: 0.75em;
+      padding-left: 1em; }
 
   /* links widget */
   /* meta widget */
