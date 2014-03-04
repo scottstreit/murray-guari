@@ -35,6 +35,10 @@ values are commented out on each line.
 .twelvecol { width: 99.999999993%; }       /* 100%;   } /* grid_12 */
 
 // layout & column defaults
+.row {
+   overflow: hidden;
+   margin-bottom: 0.2em;
+}
 .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
   position: relative;
   float: left;

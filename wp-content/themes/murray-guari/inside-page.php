@@ -36,7 +36,7 @@ Template Name: Inside Page
 
 							<?php get_snippet('Bottom'); ?>
 						</div>
-
+						<br><br>
 						<?php get_sidebar(); ?>
 
 				</div>

@@ -155,7 +155,7 @@ BUTTONS
   border: 1px solid #b66007;
   border-top-color: #d47008;
   border-left-color: #d47008;
-  padding: 4px 12px;
+  padding: 4px 8px;
   color: white;
   display: inline-block;
   font-size: 11px;
@@ -163,9 +163,9 @@ BUTTONS
   text-decoration: none;
   text-shadow: 0 1px rgba(0, 0, 0, 0.75);
   cursor: pointer;
-  margin-bottom: 20px;
   line-height: 21px;
   border-radius: 4px;
+  white-space: nowrap;
   background-color: #dd7508;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#f68209), to(#dd7508));
   background-image: -webkit-linear-gradient(top, #f68209, #dd7508);
@@ -287,6 +287,10 @@ values are commented out on each line.
   width: 99.999999993%; }
 
 /* 100%;   } /* grid_12 */
+.row {
+  overflow: hidden;
+  margin-bottom: 0.2em; }
+
 .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
   position: relative;
   float: left;
@@ -479,7 +483,8 @@ NAVIGATION STYLES
         background-position: 95% 50%; }
       #menu-main-nav-1 li a:hover, #menu-main-nav-1 li a:focus {
         background-color: #7e7e7e;
-        color: #fff; }
+        color: #fff;
+        text-shadow: #666 1px 1px 2px; }
     #menu-main-nav-1 li ul.dropdown-menu,
     #menu-main-nav-1 li ul.children {
       background: #ffffff;

@@ -603,7 +603,7 @@ BUTTONS
   border: 1px solid #b66007;
   border-top-color: #d47008;
   border-left-color: #d47008;
-  padding: 4px 12px;
+  padding: 4px 8px;
   color: white;
   display: inline-block;
   font-size: 11px;
@@ -611,9 +611,9 @@ BUTTONS
   text-decoration: none;
   text-shadow: 0 1px rgba(0, 0, 0, 0.75);
   cursor: pointer;
-  margin-bottom: 20px;
   line-height: 21px;
   border-radius: 4px;
+  white-space: nowrap;
   background-color: #dd7508;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#f68209), to(#dd7508));
   background-image: -webkit-linear-gradient(top, #f68209, #dd7508);
@@ -742,6 +742,9 @@ LAYOUT & GRID STYLES
 .wrap {
   width: 96%;
   margin: 0 auto; }
+
+.center {
+  text-align: center; }
 
 /*********************
 LINK STYLES
@@ -996,6 +999,8 @@ MOBILE MENU
     color: #4d1f2a;
     font-weight: bold;
     font-size: 1.4em; }
+  .slide > div p {
+    font-size: 10px; }
   .slide > div ul {
     list-style-type: disc;
     margin-left: 18px; }
@@ -1011,6 +1016,7 @@ MOBILE MENU
     width: auto; }
 
 .callout {
+  position: relative;
   border: 1px solid #ccc;
   margin-top: 20px;
   padding: 10px;
@@ -1028,6 +1034,8 @@ MOBILE MENU
     .callout h4 a {
       color: #4d1f2a;
       text-decoration: none; }
+  .callout p {
+    font-size: 10px; }
   .callout ul {
     list-style: none;
     float: left;
@@ -1064,6 +1072,13 @@ MOBILE MENU
     margin: 0 0 10px 7px;
     white-space: nowrap;
     display: inline-block; }
+  .callout .SocialIcons {
+    position: absolute;
+    top: 8px;
+    right: 10px; }
+    .callout .SocialIcons img {
+      float: left;
+      margin-left: 7px; }
 
 .latest-news {
   margin-top: 20px; }
@@ -1428,7 +1443,8 @@ view.
 */
 /* end .footer-links */
 .copyright {
-  color: #fff; }
+  color: #fff;
+  font-size: 10px; }
 
 /*
 LARGER MOBILE DEVICES
@@ -1580,6 +1596,10 @@ you can add resource intensive styles.
     width: 99.999999993%; }
 
   /* 100%;   } /* grid_12 */
+  .row {
+    overflow: hidden;
+    margin-bottom: 0.2em; }
+
   .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
     position: relative;
     float: left;
@@ -1706,7 +1726,8 @@ you can add resource intensive styles.
           background-position: 95% 50%; }
         #menu-main-nav-1 li a:hover, #menu-main-nav-1 li a:focus {
           background-color: #7e7e7e;
-          color: #fff; }
+          color: #fff;
+          text-shadow: #666 1px 1px 2px; }
       #menu-main-nav-1 li ul.dropdown-menu,
       #menu-main-nav-1 li ul.children {
         background: #ffffff;
