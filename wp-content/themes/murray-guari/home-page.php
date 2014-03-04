@@ -65,7 +65,7 @@ Template Name: Custom Home Page
 									while ($loop->have_posts()) : $loop->the_post();
 								?>
 									<li class="NewsBlog threecol no-gutter">
-										<a href="<?php the_permalink() ?>"><?php the_time('F jS, Y') ?></a>
+										<a href="<?php the_permalink() ?>"><?php the_time('F jS, Y'); ?></a>
 										<?php the_excerpt(); ?>
 									</li>
 								<?php endwhile; ?>

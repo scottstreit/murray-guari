@@ -3,20 +3,6 @@
 			<div id="content">
 
 				<div id="inner-content" class="wrap clearfix">
-				
-					<nav class="navbar navbar-default" role="navigation">
-						<div class="navbar-header">
-							<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-								<span class="sr-only">Toggle navigation</span> 
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-
-							<?php bones_main_nav(); ?>
-						</div>
-					</nav>
-
 
 					<div id="main" class="eightcol first clearfix" role="main">
 
@@ -27,9 +13,7 @@
 								<header class="article-header">
 
 									<h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
-									<p class="byline vcard"><?php
-										printf( __( 'Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span> <span class="amp">&amp;</span> filed under %4$s.', 'bonestheme' ), get_the_time( 'Y-m-j' ), get_the_time( get_option('date_format')), bones_get_the_author_posts_link(), get_the_category_list(', ') );
-									?></p>
+									<p class="byline vcard"><?php the_time('F jS, Y'); ?></p>
 
 								</header>
 
@@ -45,6 +29,8 @@
 								<?php comments_template(); ?>
 
 							</article>
+
+							<?php get_snippet('Bottom'); ?>
 
 						<?php endwhile; ?>
 

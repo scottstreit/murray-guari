@@ -173,8 +173,7 @@ mark {
 p,
 pre {
   margin: 1em 0;
-  color: #666;
-  font-size: 0.75em; }
+  color: #666; }
 
 /*
  * Corrects font family set oddly in IE6, S4/5, Chrome.
