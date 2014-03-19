@@ -126,18 +126,22 @@ NAVIGATION STYLES
 		position: relative;
 		height: 29px;
 		line-height: 28px;
-		border-bottom: 1px solid #333;
 		text-align: center;
 
+		&:last-child {
+			border-right: 0;
+		}
+
 		&:first-child a {
-			padding: 0 16px 0 13px;
+			padding: 0 11px;
 		}
 
 		a {
 			border-bottom: 0;
-			padding: 0 11px;
+			padding: 0 9px;
 			font-size: 10px;
-		
+			white-space: nowrap;
+
 			a.dropdown {
 				li.MainMenuSub {
 					background-image: url(/images/ArrowGreyRight.png);
@@ -181,9 +185,10 @@ NAVIGATION STYLES
 					padding-left: 10px;
 					border-right: 0;
 					display: block;
-					width: 180px;
+					width: 200px;
 					border-bottom: 1px solid #fff;
 					text-align: left;
+					text-overflow: ellipsis;
 
 					&:hover,
 					&:focus {}
@@ -217,9 +222,15 @@ NAVIGATION STYLES
 		}
 
 		/* showing sub-menus */
-		&:hover ul {
-			top: auto;
+		&:hover>ul {
+			top: 29px;
 			display: block;
+		}
+
+		&>ul>li:hover ul {
+			display: block;
+			top: 5px;
+			left: 200px;
 		}
 
 	} /* end .menu ul li */

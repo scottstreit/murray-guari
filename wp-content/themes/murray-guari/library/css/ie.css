@@ -466,18 +466,20 @@ NAVIGATION STYLES
     position: relative;
     height: 29px;
     line-height: 28px;
-    border-bottom: 1px solid #333;
     text-align: center;
     /*	
     plan your menus and drop-downs wisely.
     */
     /* showing sub-menus */ }
+    #menu-main-nav-1 li:last-child {
+      border-right: 0; }
     #menu-main-nav-1 li:first-child a {
-      padding: 0 16px 0 13px; }
+      padding: 0 11px; }
     #menu-main-nav-1 li a {
       border-bottom: 0;
-      padding: 0 11px;
+      padding: 0 9px;
       font-size: 10px;
+      white-space: nowrap;
       /*
       you can use hover styles here even though this size
       has the possibility of being a mobile device.
@@ -514,15 +516,20 @@ NAVIGATION STYLES
           padding-left: 10px;
           border-right: 0;
           display: block;
-          width: 180px;
+          width: 200px;
           border-bottom: 1px solid #fff;
-          text-align: left; }
+          text-align: left;
+          text-overflow: ellipsis; }
         #menu-main-nav-1 li ul.dropdown-menu li:last-child a,
         #menu-main-nav-1 li ul.children li:last-child a {
           border-bottom: 0; }
-    #menu-main-nav-1 li:hover ul {
-      top: auto;
+    #menu-main-nav-1 li:hover > ul {
+      top: 29px;
       display: block; }
+    #menu-main-nav-1 li > ul > li:hover ul {
+      display: block;
+      top: 5px;
+      left: 200px; }
 
 /* end #menu-main-nav-1 */
 /*********************
@@ -598,7 +605,7 @@ NAVIGATION STYLES
 #menu-main-nav-1 li:first-child a {
   padding: 0 17px 0 20px; }
 #menu-main-nav-1 li a {
-  padding: 0 19px;
+  padding: 0 16px;
   font-size: 12px; }
 
 /* end #menu-main-nav-1 */
