@@ -52,7 +52,7 @@
 				<div id="inner-header" class="wrap clearfix">
 					<div class="header-top clearfix">
 						<div class="search-form clearfix">
-							<span><a href="#">Hablamos español</a></span>
+							<span><a href="<?php bloginfo('url'); ?>/spanish">Hablamos español</a></span>
 							<span>(561) 366-9099</span>
 							<span>SEARCH</span>
 							<form id="searchform" method="get" action="<?php bloginfo('siteurl')?>/">
