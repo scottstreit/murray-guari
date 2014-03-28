@@ -60,7 +60,7 @@ Template Name: Custom Home Page
 							</h6>
 							<ul>
 								<?php
-									$args = array('post_type' => 'post', 'posts_per_page' => 4);
+									$args = array('post_type' => 'post', 'posts_per_page' => 3);
 									$loop = new WP_Query($args);
 									while ($loop->have_posts()) : $loop->the_post();
 								?>
@@ -69,6 +69,26 @@ Template Name: Custom Home Page
 										<?php the_excerpt(); ?>
 									</li>
 								<?php endwhile; ?>
+
+								<?php 
+									require_once dirname(__FILE__).'/Facebook/OAuthFacebook.php';
+									$FB = new OAuthFacebook;
+									$Feed = $FB->GetFeed(102147855029);
+									
+									$N = $Feed['data'][0];
+									
+									if (strlen($N['message']) > 130) {
+										$N['message'] = substr($N['message'],0,130).'...';
+									}
+									?>
+									<li class="NewsFacebook threecol no-gutter">
+									  <a href="<?php echo $N['link'];?>" target="_blank"><?php echo date('F j, Y', strtotime($N['updated_time']));?></a>
+									  <p><?php echo $N['message'];?></p>
+									  <div><a href="<?php echo $N['link'];?>" target="_blank">FACEBOOK</a></div>';
+									</li>
+
+
+
 							</ul>
 						</div>
 					</div>
