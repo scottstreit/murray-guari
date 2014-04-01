@@ -169,7 +169,7 @@ HEADER STYLES
 #inner-header {
 	padding-top: 10px;
 	font-size: 12px;
-	
+
 	.header-top {
 		text-align: center;
 	}
@@ -182,7 +182,7 @@ HEADER STYLES
 	}
 	.tag-container {
 		margin: 20px auto;
-		
+
 		.tag-line {
 			font-style: italic;
 			font-size: 15px;
@@ -201,7 +201,7 @@ HEADER STYLES
 	}
 	span  {
 		margin-right: 20px;
-		
+
 		a {
 			color: #fff;
 			text-decoration: none;
@@ -209,7 +209,7 @@ HEADER STYLES
 	}
 	#searchform {
 		display: inline-block;
-		
+
 		.search-box {
 			width: 150px;
 			height: 16px;
@@ -375,7 +375,7 @@ and more scalable.
 	a {
 		color: #fff;
 		text-decoration: none;
-		
+
 		&:hover {
 			color: $bones-orange;
 		}
@@ -407,7 +407,7 @@ MOBILE MENU
 	background-image: none;
 	border: 1px solid transparent;
 	border-radius: 4px;
-	
+
 	.icon-bar+.icon-bar {
 		margin-top: 4px;
 	}
@@ -519,7 +519,7 @@ MOBILE MENU
 		margin: 0;
 		padding-bottom: 9px;
 		margin-bottom: 7px;
-		
+
 		a {
 			color: $bones-maroon;
 			text-decoration: none;
@@ -529,14 +529,14 @@ MOBILE MENU
 	p {
 		font-size: 10px;
 	}
-	
+
 	ul {
 		list-style: none;
 		float: left;
 		width: 175px;
 		margin: 0 0 0 7px;
 		padding: 0;
-		
+
 		li {
 				color: #666;
 				font-size: 12px;
@@ -545,31 +545,31 @@ MOBILE MENU
 				font-size: 12px;
 				color: $grey-link;
 				text-decoration: none;
-				
+
 				&:hover {
 					color: $bones-maroon;
 					text-decoration: underline;
 				}
-				
+
 				li:last a {
 					color: $bones-orange;
 				}
 			}
 		}
 	}
-	
+
 	img {
 		float: left;
 		margin-top: 0;
 		margin-bottom: 0;
 	}
-	
+
 	span {
 		color: #666;
 		font-size: 12px;
 		text-align: center;
 	}
-	
+
 	.small-type {
 		color: #666;
 		font-size: 11px;
@@ -586,7 +586,7 @@ MOBILE MENU
 		top: 8px;
 		right: 10px;
 
-		img { 
+		img {
 			float: left;
 			margin-left: 7px;
 		}
@@ -608,20 +608,20 @@ MOBILE MENU
 			color: #ffffff;
 			float: right;
 			text-decoration: none;
-			
-			
-			
+
+
+
 			&:after {
 				content: "▶";
 				padding-left: 10px;
-				
+
 			}
 		}
 	}
 	ul {
 		margin: 0;
 		display: table;
-		
+
 		li {
 			height: 130px;
 			padding: 5px 10px 10px 10px;
@@ -630,10 +630,10 @@ MOBILE MENU
 			color: #666;
 			font-size: 12px;
 			overflow: hidden;
-			
+
 			a {
 				text-decoration: none;
-				
+
 				&:hover {
 					text-decoration: underline;
 				}
@@ -664,7 +664,7 @@ POSTS & CONTENT STYLES
 
 			header {}
 
-			footer {	
+			footer {
 				margin-top: 30px;
 			}
 
@@ -855,7 +855,7 @@ PAGE NAVI STYLES
                 	font-weight: bold;
                 }
                 a:hover, a:focus {
-                    
+
                 }
             }
         }
@@ -1148,7 +1148,14 @@ COMMENT FORM STYLES
 /*********************
 CONTENT
 *********************/
-
+.Right {
+	float: right;
+	margin: 0 0 0 15px;
+}
+.Left {
+	float: left;
+	margin: 0 15px 0 0;
+}
 
 /*********************
 SIDEBARS & ASIDES
@@ -1178,7 +1185,7 @@ SIDEBARS & ASIDES
 	.widgettitle {}
 
 	.widget {
-		
+
 		ul {
 
 			li {
@@ -1251,4 +1258,3 @@ FOOTER STYLES
 		color: #fff;
 		font-size: 10px;
 	}
-
