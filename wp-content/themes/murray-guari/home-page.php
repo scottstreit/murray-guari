@@ -39,7 +39,7 @@ Template Name: Custom Home Page
 
 							<?php endwhile; ?>
 						<?php endif; ?>
-						
+
 						<div class="fourcol first callout">
 							<?php get_snippet('Practice'); ?>
 						</div>
@@ -51,8 +51,8 @@ Template Name: Custom Home Page
 						<div class="fourcol callout">
 							<?php get_snippet('Contact'); ?>
 						</div>
-						
-						
+
+
 						<div class="latest-news twelvecol first">
 							<h6>Latest News
 								<span>&nbsp;</span>
@@ -70,21 +70,21 @@ Template Name: Custom Home Page
 									</li>
 								<?php endwhile; ?>
 
-								<?php 
+								<?php
 									require_once dirname(__FILE__).'/Facebook/OAuthFacebook.php';
 									$FB = new OAuthFacebook;
 									$Feed = $FB->GetFeed(102147855029);
-									
+
 									$N = $Feed['data'][0];
-									
+
 									if (strlen($N['message']) > 130) {
 										$N['message'] = substr($N['message'],0,130).'...';
 									}
 									?>
 									<li class="NewsFacebook threecol no-gutter">
-									  <a href="<?php echo $N['link'];?>" target="_blank"><?php echo date('F j, Y', strtotime($N['updated_time']));?></a>
-									  <p><?php echo $N['message'];?></p>
-									  <div><a href="<?php echo $N['link'];?>" target="_blank">FACEBOOK</a></div>';
+										<a href="<?php echo $N['link'];?>" target="_blank"><?php echo date('F j, Y', strtotime($N['updated_time']));?></a>
+										<p><?php echo $N['message'];?></p>
+										<div><a href="<?php echo $N['link'];?>" target="_blank">FACEBOOK</a></div>
 									</li>
 
 

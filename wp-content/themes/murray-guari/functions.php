@@ -183,7 +183,7 @@ function snippet_init() {
 		'view_item' => __('View Snippet'),
 		'search_items' => __('Search Snippets'),
 		'not_found' => __('No Snippets found'),
-		'not_found_in_trash' => __('No Snippets found in Trash'), 
+		'not_found_in_trash' => __('No Snippets found in Trash'),
 		'parent_item_colon' => '',
 		'menu_name' => 'Snippets'
 	);
@@ -191,16 +191,16 @@ function snippet_init() {
 		'labels' => $labels,
 		'public' => true,
 		'publicly_queryable' => false,
-		'show_ui' => true, 
-		'show_in_menu' => true, 
+		'show_ui' => true,
+		'show_in_menu' => true,
 		'query_var' => true,
 		'rewrite' => true,
 		'capability_type' => 'post',
-		'has_archive' => true, 
+		'has_archive' => true,
 		'hierarchical' => false,
 		'menu_position' => 22,
 		'supports' => array('title', 'editor', 'thumbnail')
-	); 
+	);
 	register_post_type('snippet', $args);
 }
 
@@ -217,7 +217,7 @@ function slide_init() {
 		'view_item' => __('View Slide'),
 		'search_items' => __('Search Slides'),
 		'not_found' => __('No slides found'),
-		'not_found_in_trash' => __('No slides found in Trash'), 
+		'not_found_in_trash' => __('No slides found in Trash'),
 		'parent_item_colon' => '',
 		'menu_name' => 'Slides'
 	);
@@ -225,16 +225,16 @@ function slide_init() {
 		'labels' => $labels,
 		'public' => true,
 		'publicly_queryable' => true,
-		'show_ui' => true, 
-		'show_in_menu' => true, 
+		'show_ui' => true,
+		'show_in_menu' => true,
 		'query_var' => true,
 		'rewrite' => true,
 		'capability_type' => 'post',
-		'has_archive' => true, 
+		'has_archive' => true,
 		'hierarchical' => false,
 		'menu_position' => null,
 		'supports' => array('title', 'editor', 'thumbnail')
-	); 
+	);
 	register_post_type('slide', $args);
 }
 
@@ -283,3 +283,9 @@ function get_snippet($name) {
 		echo do_shortcode($snippet[4]);
 	}
 }
+
+/* Custom exercpt length */
+function custom_excerpt_length( $length ) {
+	return 15;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
