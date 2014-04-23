@@ -11,7 +11,7 @@
 					<div class="fourcol clearfix">
 						<h3>AFFILIATIONS</h3>
 						<div>
-							<a href="<?php site_url('/sponsorships/' ?>"><img src="<?php bloginfo('siteurl'); ?>/wp-content/uploads/2014/03/MG-Affiliations1.jpg"></a>
+							<a href="<?php site_url('/sponsorships/') ?>"><img src="<?php bloginfo('siteurl'); ?>/wp-content/uploads/2014/03/MG-Affiliations1.jpg"></a>
 						</div>
 					</div>
 					<div class="twelvecol">
