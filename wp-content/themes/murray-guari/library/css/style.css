@@ -1196,6 +1196,10 @@ POSTS & CONTENT STYLES
 /* end .wp-caption */
 /* image gallery styles */
 /* end .gallery */
+img.Left {
+  float: left;
+  margin-right: 10px; }
+
 /* gallery caption styles */
 /******************************************************************
 PAGE NAVI STYLES
@@ -1442,6 +1446,8 @@ FOOTER STYLES
   .footer h4 {
     font-size: 0.9em;
     margin: 1em 0; }
+  .footer span.caps {
+    text-transform: uppercase; }
 
 /*
 if you checked out the link above:

@@ -98,5 +98,5 @@ Template Name: Custom Home Page
 				</div>
 
 			</div>
-
+			<?php bloginfo('atom_url'); ?>
 <?php get_footer(); ?>

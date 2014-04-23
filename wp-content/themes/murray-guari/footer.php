@@ -11,11 +11,11 @@
 					<div class="fourcol clearfix">
 						<h3>AFFILIATIONS</h3>
 						<div>
-							<img src="<?php bloginfo('siteurl'); ?>/wp-content/uploads/2014/03/MG-Affiliations1.jpg">
+							<a href="<?php site_url('/sponsorships/' ?>"><img src="<?php bloginfo('siteurl'); ?>/wp-content/uploads/2014/03/MG-Affiliations1.jpg"></a>
 						</div>
 					</div>
 					<div class="twelvecol">
-						<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>. Designed by <a href="http://www.bardmarketing.com">BARD Marketing</a></p>
+						<p class="source-org copyright"><span class="caps">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?> | ALL RIGHTS RESERVED</span>. Designed by <a href="http://www.bardmarketing.com">BARD Marketing</a></p>
 					</div>
 
 				</div>

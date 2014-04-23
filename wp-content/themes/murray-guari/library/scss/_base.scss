@@ -810,6 +810,10 @@ POSTS & CONTENT STYLES
 
 		} /* end .gallery */
 
+		img.Left {
+			float: left;
+			margin-right: 10px;
+		}
 		/* gallery caption styles */
 		.gallery-caption {}
 
@@ -1232,6 +1236,9 @@ FOOTER STYLES
 		margin: 1em 0;
 	}
 
+	span.caps {
+		text-transform: uppercase;
+	}
 }
 
 	/*
