@@ -1149,6 +1149,7 @@ POSTS & CONTENT STYLES
 
 /* entry content */
 .entry-content {
+  margin-bottom: 35px;
   /*
   image alignment on a screen this size may be
   a bit difficult. It's set to start aligning
@@ -1201,6 +1202,27 @@ img.Left {
   margin-right: 10px; }
 
 /* gallery caption styles */
+ul.VideoList {
+  list-style: none;
+  padding: 0; }
+
+.VideoList li {
+  margin: 15px 0;
+  width: 100%;
+  height: 100%; }
+
+.VideoList div {
+  float: right;
+  height: 80px;
+  width: 300px;
+  margin-right: 50px;
+  padding: 10px;
+  border: 1px solid #ccc; }
+
+.VideoList p {
+  width: 100%;
+  font-size: 12px; }
+
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/

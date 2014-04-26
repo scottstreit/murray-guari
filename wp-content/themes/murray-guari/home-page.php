@@ -71,7 +71,7 @@ Template Name: Custom Home Page
 								<?php endwhile; ?>
 
 								<?php
-									require_once dirname(__FILE__).'/Facebook/OAuthFacebook.php';
+									//require_once dirname(__FILE__).'/Facebook/OAuthFacebook.php';
 									$FB = new OAuthFacebook;
 									$Feed = $FB->GetFeed(102147855029);
 
