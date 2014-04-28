@@ -71,15 +71,15 @@ Template Name: Custom Home Page
 								<?php endwhile; ?>
 
 								<?php
-									// require_once dirname(__FILE__).'/Facebook/OAuthFacebook.php';
-									// $FB = new OAuthFacebook;
-									// $Feed = $FB->GetFeed(102147855029);
-									//
-									// $N = $Feed['data'][0];
-									//
-									// if (strlen($N['message']) > 130) {
-									// 	$N['message'] = substr($N['message'],0,130).'...';
-									// }
+									require_once dirname(__FILE__).'/Facebook/OAuthFacebook.php';
+									$FB = new OAuthFacebook;
+									$Feed = $FB->GetFeed(102147855029);
+
+									$N = $Feed['data'][0];
+
+									if (strlen($N['message']) > 130) {
+										$N['message'] = substr($N['message'],0,130).'...';
+									}
 									?>
 									<li class="NewsFacebook threecol no-gutter">
 										<a href="<?php echo $N['link'];?>" target="_blank"><?php echo date('F j, Y', strtotime($N['updated_time']));?></a>
