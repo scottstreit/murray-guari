@@ -71,7 +71,7 @@ Template Name: Custom Home Page
 								<?php endwhile; ?>
 
 								<?php
-									//require_once dirname(__FILE__).'/Facebook/OAuthFacebook.php';
+									require_once dirname(__FILE__).'/Facebook/OAuthFacebook.php';
 									$FB = new OAuthFacebook;
 									$Feed = $FB->GetFeed(102147855029);
 
@@ -96,7 +96,7 @@ Template Name: Custom Home Page
 						<?php // get_sidebar(); ?>
 
 				</div>
+				<?php wp_list_categories('show_count=1&title_li=<h2>Categories</h2>'); ?>
 
 			</div>
-			<?php bloginfo('atom_url'); ?>
 <?php get_footer(); ?>
