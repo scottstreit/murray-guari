@@ -96,7 +96,7 @@ Template Name: Custom Home Page
 						<?php // get_sidebar(); ?>
 
 				</div>
-				<?php wp_list_categories('show_count=1&title_li=<h2>Categories</h2>'); ?>
+				
 
 			</div>
 <?php get_footer(); ?>
