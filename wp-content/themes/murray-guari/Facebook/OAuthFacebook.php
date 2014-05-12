@@ -44,7 +44,7 @@ class OAuthFacebook extends Facebook
             }
             catch (Exception $e)
             {
-                
+
             }
         }
 
@@ -69,7 +69,7 @@ class OAuthFacebook extends Facebook
             }
             catch (Exception $e)
             {
-                
+
             }
         }
 
@@ -95,7 +95,7 @@ class OAuthFacebook extends Facebook
             }
             catch (Exception $e)
             {
-                
+
             }
         }
 
@@ -235,7 +235,7 @@ class OAuthFacebook extends Facebook
         }
         catch (Exception $e)
         {
-            
+
         }
 
         if (is_array($feed))

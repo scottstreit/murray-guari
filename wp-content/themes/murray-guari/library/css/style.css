@@ -1111,16 +1111,25 @@ MOBILE MENU
       border-top: none;
       color: #666;
       font-size: 12px;
-      overflow: hidden; }
+      overflow: hidden;
+      position: relative;
+      background: url("../images/IconRSS.png") no-repeat 10px 100px; }
       .latest-news ul li a {
         text-decoration: none; }
         .latest-news ul li a:hover {
           text-decoration: underline; }
+      .latest-news ul li span {
+        position: absolute;
+        bottom: 10px;
+        left: 30px;
+        text-transform: uppercase; }
       .latest-news ul li p {
         margin: 0; }
       .latest-news ul li div a {
         display: table-cell;
         vertical-align: bottom; }
+    .latest-news ul li.NewsFacebook {
+      background-image: url("../images/IconFacebook.png"); }
 
 /*********************
 POSTS & CONTENT STYLES
@@ -1213,7 +1222,7 @@ ul.VideoList {
 
 .VideoList div {
   float: right;
-  height: 80px;
+  height: 100px;
   width: 300px;
   margin-right: 50px;
   padding: 10px;
@@ -1221,7 +1230,9 @@ ul.VideoList {
 
 .VideoList p {
   width: 100%;
-  font-size: 12px; }
+  font-size: 12px;
+  margin-top: 0;
+  line-height: 14px; }
 
 /******************************************************************
 PAGE NAVI STYLES

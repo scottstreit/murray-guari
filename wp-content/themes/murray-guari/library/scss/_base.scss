@@ -630,6 +630,8 @@ MOBILE MENU
 			color: #666;
 			font-size: 12px;
 			overflow: hidden;
+			position: relative;
+			background: url('../images/IconRSS.png') no-repeat 10px 100px;
 
 			a {
 				text-decoration: none;
@@ -638,6 +640,12 @@ MOBILE MENU
 					text-decoration: underline;
 				}
 			}
+			span {
+				position: absolute;
+				bottom: 10px;
+				left: 30px;
+				text-transform: uppercase;
+			}
 			p {
 				margin: 0;
 			}
@@ -645,9 +653,26 @@ MOBILE MENU
 				display: table-cell;
 				vertical-align: bottom;
 			}
+
+
+		}
+		li.NewsFacebook {
+			background-image: url('../images/IconFacebook.png');
 		}
 	}
 }
+	// span.icon {
+	// 	background: url('../images/IconBlog.png') no-repeat 0 0;
+	// 	width: 16px;
+	// 	height: 16px;
+	// 	display: inline-block;
+	// 	position: absolute;
+	// 	bottom: 10px;
+	// 	left: 10px;
+	// 	text-indent: 20px;
+	// }
+
+
 
 
 /*********************
@@ -834,7 +859,7 @@ POSTS & CONTENT STYLES
 		}
 		.VideoList div {
 			float: right;
-			height: 80px;
+			height: 100px;
 			width: 300px;
 			margin-right: 50px;
 			padding: 10px;
@@ -843,6 +868,8 @@ POSTS & CONTENT STYLES
 		.VideoList p {
 			width: 100%;
 			font-size: 12px;
+			margin-top: 0;
+			line-height: 14px;
 		}
 /******************************************************************
 PAGE NAVI STYLES

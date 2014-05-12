@@ -60,15 +60,32 @@ Template Name: Custom Home Page
 							</h6>
 							<ul>
 								<?php
-									$args = array('post_type' => 'post', 'posts_per_page' => 3);
+									$args = array('post_category' => 'blog', 'posts_per_page' => 1);
 									$loop = new WP_Query($args);
 									while ($loop->have_posts()) : $loop->the_post();
 								?>
 									<li class="NewsBlog threecol no-gutter">
-										<a href="<?php the_permalink() ?>"><?php the_time('F jS, Y'); ?></a>
-										<?php the_excerpt(); ?>
+										<?php the_time('F jS, Y'); ?><br><br>
+										<a href="<?php the_permalink() ?>">
+											<?php the_title(); ?>
+										</a>
+										<span class="icon">Blog</span>
 									</li>
 								<?php endwhile; ?>
+								<?php
+									$args = array('post_category' => 'press', 'posts_per_page' => 2);
+									$loop = new WP_Query($args);
+									while ($loop->have_posts()) : $loop->the_post();
+								?>
+									<li class="NewsPress threecol no-gutter">
+										<?php the_time('F jS, Y'); ?><br><br>
+										<a href="<?php the_permalink() ?>">
+											<?php the_title(); ?>
+										</a>
+										<span class="icon">Press</span>
+									</li>
+								<?php endwhile; ?>
+
 
 								<?php
 									require_once dirname(__FILE__).'/Facebook/OAuthFacebook.php';
@@ -84,7 +101,7 @@ Template Name: Custom Home Page
 									<li class="NewsFacebook threecol no-gutter">
 										<a href="<?php echo $N['link'];?>" target="_blank"><?php echo date('F j, Y', strtotime($N['updated_time']));?></a>
 										<p><?php echo $N['message'];?></p>
-										<div><a href="<?php echo $N['link'];?>" target="_blank">FACEBOOK</a></div>
+										<span class="icon"><a href="<?php echo $N['link'];?>" target="_blank">FACEBOOK</a></span>
 									</li>
 
 
@@ -96,7 +113,7 @@ Template Name: Custom Home Page
 						<?php // get_sidebar(); ?>
 
 				</div>
-				<?php wp_list_categories('show_count=1&title_li=<h2>Categories</h2>'); ?>
+
 
 			</div>
 <?php get_footer(); ?>

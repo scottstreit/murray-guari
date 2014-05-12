@@ -15,3 +15,5 @@ sitemap.xml.gz
 .DS_Store
 wp-content/themes/murray-guari/library/.sass-cache/
 wp-content/themes/murray-guari/library/scss/.sass-cache/
+wp-content/themes/murray-guari/Facebook/fb_ca_chain.bundle.crt
+
