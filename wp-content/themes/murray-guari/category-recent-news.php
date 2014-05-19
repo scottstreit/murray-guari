@@ -5,9 +5,30 @@
 				<div id="inner-content" class="wrap clearfix">
 
 						<div id="main" class="eightcol first clearfix" role="main">
+
 							<h1 class="archive-title"><?php single_cat_title(); ?></h1>
 
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+							<p>Welcome to Murray & Guari's News and Media Center. Here you will find our breaking news and announcements from our firm including case updates, legal updates and community involvement.</p>
+
+							<p>
+							To Download Firm Press Kit, <a href="<?php bloginfo('url'); ?>/images/MurrayGuari-PressKitC-020111-v1.pdf">Click Here</a></br>
+							To view Cased Covered in Media, <a href="<?php bloginfo('url'); ?>/category/media-coverage">Click Here</a></br>
+							To view Archived Press Releases, <a href="<?php bloginfo('url'); ?>/press-releases">Click Here</a></br>
+							To view our Newsletters, <a href="<?php bloginfo('url'); ?>/newsletters">Click Here</a></br>
+							</p>
+
+							<p>We welcome inquires from the media and thank you for your interest.  If you have any questions on any press release or case, please contact us.</p
+							<hr />
+							<?php //if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+							<?php
+							$taxonomies = get_the_term_list($post->ID, 'recent-news', 'blog-posts', 'media-coverage');
+							$taxonomies = explode('>', $taxonomies);
+							$taxonomies = $taxonomies[1];
+
+							$myq = new WP_Query('your_taxonomie = '.$taxonomies);
+							if ($myq->have_posts()) : while ($myq->have_posts()) : $myq->the_post(); ?>
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article">
 
@@ -18,10 +39,10 @@
 								</header>
 
 								<section class="entry-content clearfix">
+									<?php get_the_category(); ?>
+									<?php single_cat_title( '', true ); ?>
 
-									<?php the_post_thumbnail( 'bones-thumb-300' ); ?>
-
-									<?php the_content(); ?>
+									<?php the_excerpt(); ?>
 
 								</section>
 

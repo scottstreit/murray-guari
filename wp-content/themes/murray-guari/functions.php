@@ -283,9 +283,3 @@ function get_snippet($name) {
 		echo do_shortcode($snippet[4]);
 	}
 }
-
-/* Custom exercpt length */
-function custom_excerpt_length( $length ) {
-	return 15;
-}
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
