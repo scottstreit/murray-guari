@@ -11,21 +11,33 @@
 							<p>With more than 35 years of combined experience, the trial attorneys at Murray &amp; Guari have handled a variety of cases - many of them quite challenging, and all of them different. But there is one thing that all of our cases have in common - which is our strong desire to see justice served and our client's case resolved to their benefit and satisfaction. Below we share a summary of some of our most challenging - and most rewarding.</p>
 							<p>The accounts of recent trials, jury verdicts and settlements contained in this website are intended to illustrate the experience of the firm in a variety of litigation areas. Each case is unique, and the results in one case do not necessarily indicate the quality or value of another case.</p>
 
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+							<?php //if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+
+
+
+
+
+							<?php $descendants = get_categories( array('child_of' => '17')); ?>
+							<?php foreach ( $descendants as $child ) { ?>
+							<?php $catPosts = new WP_Query(); $catPosts->query("cat=$child->term_id"); ?>
+							<h1><?php echo $child->cat_name; ?></h1>
+							<?php while ($catPosts->have_posts()) : $catPosts->the_post(); ?>
+
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article">
 
 								<header class="article-header">
 
 									<h3 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-									
+
 								</header>
 
 								<section class="entry-content clearfix">
-
-									<?php the_post_thumbnail( 'bones-thumb-300' ); ?>
-
-									<?php the_content(); ?>
+									<?php foreach((get_the_category()) as $category) { echo ( $category->cat_name != 'local' ) ? $category->cat_name . ' ' : ''; } ?>
+									<?php get_the_category(); ?>
+									<?php single_cat_title( '', true ); ?>
+									<?php the_excerpt(); ?>
 
 								</section>
 
@@ -36,6 +48,8 @@
 							</article>
 
 							<?php endwhile; ?>
+
+							<?php } ?>
 
 									<?php if ( function_exists( 'bones_page_navi' ) ) { ?>
 										<?php bones_page_navi(); ?>
@@ -48,21 +62,6 @@
 										</nav>
 									<?php } ?>
 
-							<?php else : ?>
-
-									<article id="post-not-found" class="hentry clearfix">
-										<header class="article-header">
-											<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
-										</header>
-										<section class="entry-content">
-											<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
-										</section>
-										<footer class="article-footer">
-												<p><?php _e( 'This is the error message in the archive.php template.', 'bonestheme' ); ?></p>
-										</footer>
-									</article>
-
-							<?php endif; ?>
 
 						</div>
 
