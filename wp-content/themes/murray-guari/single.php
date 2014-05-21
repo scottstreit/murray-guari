@@ -13,7 +13,6 @@
 								<header class="article-header">
 
 									<h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
-									<p class="byline vcard"><?php the_time('F jS, Y'); ?></p>
 
 								</header>
 

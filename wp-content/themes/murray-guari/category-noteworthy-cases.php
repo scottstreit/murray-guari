@@ -21,7 +21,7 @@
 							<?php $descendants = get_categories( array('child_of' => '17')); ?>
 							<?php foreach ( $descendants as $child ) { ?>
 							<?php $catPosts = new WP_Query(); $catPosts->query("cat=$child->term_id"); ?>
-							<h1><?php echo $child->cat_name; ?></h1>
+							<h1><?php echo $child->cat_name . ' Cases'; ?></h1>
 							<?php while ($catPosts->have_posts()) : $catPosts->the_post(); ?>
 
 
