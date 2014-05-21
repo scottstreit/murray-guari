@@ -34,9 +34,9 @@
 								</header>
 
 								<section class="entry-content clearfix">
-									<?php foreach((get_the_category()) as $category) { echo ( $category->cat_name != 'local' ) ? $category->cat_name . ' ' : ''; } ?>
-									<?php get_the_category(); ?>
-									<?php single_cat_title( '', true ); ?>
+									<?php foreach((get_the_category()) as $category) {
+										echo ( $category->cat_name != 'Noteworthy Cases' ) ? $category->cat_name . ' ' : '';
+									} ?>
 									<?php the_excerpt(); ?>
 
 								</section>
