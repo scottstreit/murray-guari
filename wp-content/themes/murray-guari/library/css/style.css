@@ -1082,6 +1082,18 @@ MOBILE MENU
     .callout .SocialIcons img {
       float: left;
       margin-left: 7px; }
+  .callout ul.sidebar-news {
+    float: none; }
+    .callout ul.sidebar-news li {
+      background: url("../images/IconRSS.png") no-repeat 10px 68px; }
+      .callout ul.sidebar-news li span {
+        padding-left: 20px;
+        text-transform: uppercase; }
+    .callout ul.sidebar-news li.NewsFacebook {
+      background-image: url("../images/IconFacebook.png"); }
+    .callout ul.sidebar-news span {
+      display: block;
+      text-align: left; }
 
 .latest-news {
   margin-top: 20px; }

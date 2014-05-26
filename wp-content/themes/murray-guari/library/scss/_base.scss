@@ -591,6 +591,31 @@ MOBILE MENU
 			margin-left: 7px;
 		}
 	}
+	ul.sidebar-news {
+		float: none;
+
+		li {
+			background: url('../images/IconRSS.png') no-repeat 10px 68px;
+
+			span {
+				// position: absolute;
+				// bottom: 10px;
+				// left: 30px;
+				padding-left: 20px;
+				text-transform: uppercase;
+			}
+		}
+
+		li.NewsFacebook {
+			background-image: url('../images/IconFacebook.png');
+		}
+
+		span {
+			display: block;
+			text-align: left;
+		}
+	}
+
 }
 
 .latest-news {

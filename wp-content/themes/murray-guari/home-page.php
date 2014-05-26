@@ -60,7 +60,7 @@ Template Name: Custom Home Page
 							</h6>
 							<ul>
 								<?php
-									$args = array('post_category' => 'blog', 'posts_per_page' => 1);
+									$args = array('post_category' => 'blog-posts', 'posts_per_page' => 1);
 									$loop = new WP_Query($args);
 									while ($loop->have_posts()) : $loop->the_post();
 								?>
@@ -73,19 +73,27 @@ Template Name: Custom Home Page
 									</li>
 								<?php endwhile; ?>
 								<?php
-									$args = array('post_category' => 'press', 'posts_per_page' => 2);
-									$loop = new WP_Query($args);
-									while ($loop->have_posts()) : $loop->the_post();
-								?>
-									<li class="NewsPress threecol no-gutter">
-										<?php the_time('F jS, Y'); ?><br><br>
-										<a href="<?php the_permalink() ?>">
-											<?php the_title(); ?>
-										</a>
-										<span class="icon">Press</span>
-									</li>
-								<?php endwhile; ?>
+									$args = array('cat=7', 'posts_per_page' => 2);
+									$my_query = new WP_Query($args);
+									if ($my_query->have_posts()) {
+										while ($my_query->have_posts() ) {
+											$my_query -> the_post();
 
+											?>
+
+											<li class="NewsPress threecol no-gutter">
+												<?php the_time('F jS, Y'); ?><br><br>
+												<a href="<?php the_permalink() ?>">
+													<?php the_title(); ?>
+												</a>
+												<span class="icon">Press</span>
+											</li>
+
+											<?php
+
+										}
+									}
+								?>
 
 								<?php
 									require_once dirname(__FILE__).'/Facebook/OAuthFacebook.php';
@@ -110,10 +118,7 @@ Template Name: Custom Home Page
 						</div>
 					</div>
 
-						<?php // get_sidebar(); ?>
-
 				</div>
-
 
 			</div>
 <?php get_footer(); ?>
