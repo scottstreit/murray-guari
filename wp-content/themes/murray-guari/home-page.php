@@ -73,18 +73,19 @@ Template Name: Custom Home Page
 									</li>
 								<?php endwhile; ?>
 								<?php
-									$args = array('cat=7', 'posts_per_page' => 2);
+									$args = array('cat' => 6, 'posts_per_page' => 2);
 									$my_query = new WP_Query($args);
 									if ($my_query->have_posts()) {
 										while ($my_query->have_posts() ) {
 											$my_query -> the_post();
-
+											$theTitle = get_the_title();
 											?>
 
 											<li class="NewsPress threecol no-gutter">
 												<?php the_time('F jS, Y'); ?><br><br>
 												<a href="<?php the_permalink() ?>">
-													<?php the_title(); ?>
+													<?php //the_title(); ?>
+													<?php echo substr($theTitle, 0, 70) ?>
 												</a>
 												<span class="icon">Press</span>
 											</li>
@@ -119,6 +120,7 @@ Template Name: Custom Home Page
 					</div>
 
 				</div>
+
 
 			</div>
 <?php get_footer(); ?>

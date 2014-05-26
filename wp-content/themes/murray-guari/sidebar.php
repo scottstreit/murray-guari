@@ -25,7 +25,7 @@
 									</li>
 								<?php endwhile; ?>
 								<?php
-									$args = array('cat=7', 'posts_per_page' => 2);
+									$args = array('cat=6', 'posts_per_page' => 2);
 									$my_query = new WP_Query($args);
 									if ($my_query->have_posts()) {
 										while ($my_query->have_posts() ) {
