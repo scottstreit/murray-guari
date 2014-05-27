@@ -17,7 +17,7 @@
 									while ($loop->have_posts()) : $loop->the_post();
 								?>
 									<li class="NewsBlog">
-										<?php the_time('F jS, Y'); ?><br><br>
+										<?php the_time('F jS, Y'); ?><br>
 										<a href="<?php the_permalink() ?>">
 											<?php the_title(); ?>
 										</a>
@@ -30,19 +30,15 @@
 									if ($my_query->have_posts()) {
 										while ($my_query->have_posts() ) {
 											$my_query -> the_post();
-
 											?>
-
 											<li class="NewsPress">
-												<?php the_time('F jS, Y'); ?><br><br>
+												<?php the_time('F jS, Y'); ?><br>
 												<a href="<?php the_permalink() ?>">
 													<?php the_title(); ?>
 												</a>
 												<span class="icon">Press</span>
 											</li>
-
 											<?php
-
 										}
 									}
 								?>
@@ -51,9 +47,7 @@
 									require_once dirname(__FILE__).'/Facebook/OAuthFacebook.php';
 									$FB = new OAuthFacebook;
 									$Feed = $FB->GetFeed(102147855029);
-
 									$N = $Feed['data'][0];
-
 									if (strlen($N['message']) > 130) {
 										$N['message'] = substr($N['message'],0,130).'...';
 									}
@@ -68,11 +62,5 @@
 
 
 						</div>
-						<?php //if ( is_active_sidebar( 'sidebar1' ) ) : ?>
-
-							<?php //dynamic_sidebar( 'sidebar1' ); ?>
-
-						<?php //endif; ?>
-
 					</div>
 				</div>
