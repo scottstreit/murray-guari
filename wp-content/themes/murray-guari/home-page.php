@@ -60,7 +60,7 @@ Template Name: Custom Home Page
 							</h6>
 							<ul>
 								<?php
-									$args = array('post_category' => 'blog-posts', 'posts_per_page' => 1);
+									$args = array('cat' => '5', 'posts_per_page' => 1);
 									$loop = new WP_Query($args);
 									while ($loop->have_posts()) : $loop->the_post();
 								?>

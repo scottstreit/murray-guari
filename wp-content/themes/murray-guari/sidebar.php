@@ -12,7 +12,7 @@
 							<h4 class="widgettitle">Latest News</h4>
 							<ul class="sidebar-news">
 								<?php
-									$args = array('post_category' => 'blog-posts', 'posts_per_page' => 1);
+									$args = array('cat' => '5', 'posts_per_page' => 1);
 									$loop = new WP_Query($args);
 									while ($loop->have_posts()) : $loop->the_post();
 								?>
