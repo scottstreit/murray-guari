@@ -14,21 +14,13 @@
 							<p>
 							To Download Firm Press Kit, <a href="<?php bloginfo('url'); ?>/images/MurrayGuari-PressKitC-020111-v1.pdf">Click Here</a></br>
 							To view Cased Covered in Media, <a href="<?php bloginfo('url'); ?>/category/media-coverage">Click Here</a></br>
-							To view Archived Press Releases, <a href="<?php bloginfo('url'); ?>/press-releases">Click Here</a></br>
 							To view our Newsletters, <a href="<?php bloginfo('url'); ?>/newsletters">Click Here</a></br>
 							</p>
 
 							<p>We welcome inquires from the media and thank you for your interest.  If you have any questions on any press release or case, please contact us.</p
 							<hr />
-							<?php //if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-							<?php
-							$taxonomies = get_the_term_list($post->ID, 'recent-news', 'blog-posts', 'media-coverage');
-							$taxonomies = explode('>', $taxonomies);
-							$taxonomies = $taxonomies[1];
-
-							$myq = new WP_Query('your_taxonomie = '.$taxonomies);
-							if ($myq->have_posts()) : while ($myq->have_posts()) : $myq->the_post(); ?>
+							<?php $query = new WP_Query( 'category_name=recent-news,blog-posts,media-coverage' ); ?>
+							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article">
 
